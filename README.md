@@ -1,4 +1,4 @@
-# Kanji-Naiwake
+# Kanji-Uchiwake
 
 This Javascript app displays a kanji character's "exploded view" -- all components subdivided -- with associations to related kanji sharing those components.
 
