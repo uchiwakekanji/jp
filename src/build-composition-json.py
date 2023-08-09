@@ -9,6 +9,7 @@ input_file = 'C:/xampp/htdocs/jp/raw/kanji-composition-map.txt'
 output_file = 'C:/xampp/htdocs/jp/html/js/kjwk-composition.js'
 composition = {}
 
+# "r" stand for read
 with open(input_file, "r", encoding="utf8") as fp:
     lines = fp.readlines()
 
@@ -26,6 +27,7 @@ for line in lines:
     parts = [x for x in re.split(r'\s+', part_str) if x != '']
     composition[whole] = parts
 
+# "w" stand for write
 with io.open(output_file, "w", encoding='utf8') as fp:
     fp.write("kanji_parts = ")
     # for debug, use indent=4; for production, leave it minified
