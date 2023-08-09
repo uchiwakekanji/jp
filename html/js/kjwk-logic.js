@@ -530,7 +530,7 @@ function reset_graph(kanji) {
 	}
 	else {
 		var state = {'k': kanji};
-		window.history.pushState(state, null, '/jp/html/kjwk/?k=' + kanji); //base URL
+		window.history.pushState(state, null, '/jp/?k=' + kanji); //base URL change this
 	}
 }
 
