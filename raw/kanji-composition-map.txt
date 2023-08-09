@@ -36,11 +36,11 @@
 壱: 匕 士 冖 #verified
 逸: ⻌ 免 #verified
 稲: 禾 日 #verified
-芋: 艹 于
-員: 貝 口
-因: 口 大
-姻: 女 因
-引: 弓 丨
+芋: 艹 于 #verified
+員: 貝 口 #verified
+因: 口 大 #verified
+姻: 女 因 #verified
+引: 弓 丨 #verified
 飲: 飠 欠
 院: ⻖ 完
 隠: ⻖ 㥯
