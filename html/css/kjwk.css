@@ -152,11 +152,11 @@ h1, h2 {
 }
 
 .jlpt-level-one {
-	background: #ACEDED;
+	background: #FFBABA;
 }
 
 .jlpt-level-two {
-	background: #B3F6B3;
+	background: #C5B7F1;
 }
 
 .jlpt-level-three {
@@ -164,11 +164,11 @@ h1, h2 {
 }
 
 .jlpt-level-four {
-	background: #C5B7F1;
+	background: #B3F6B3;
 }
 
 .jlpt-level-five {
-	background: #FFBABA;
+	background: #ACEDED;
 }
 
 .kanji-main {
