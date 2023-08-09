@@ -693,7 +693,7 @@
 施: 方 𠂉 也
 旨: 日 匕
 枝: 木 支
-止: #is0
+止: 上 丨
 死: 歹 匕
 氏: #is0
 祉: 礻 止
@@ -911,7 +911,6 @@
 賞: 貝 尚
 鐘: 釒 童
 障: ⻖ 章
-上: #is0
 丈: #is0
 乗: 丿 #radonly shinjitai
 冗: 冖 几
@@ -2503,3 +2502,8 @@
 麓: 林 鹿
 麺: 麦 面
 𠮟: 口 七
+齒: 止 𠚕 #verified
+𠚕: 𠈌 𠙵 #verified
+𠙵: 凵 一 #verified
+上: ⺊ 一 #verified
+从: 人 #double #verified
