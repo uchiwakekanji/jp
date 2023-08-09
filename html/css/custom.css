@@ -1,0 +1,70 @@
+/* custom.css */
+
+.k-content { max-width: 48em; }
+
+h1 { font-weight: bold; }
+
+span.red { color: red; }
+
+.navbar-text > a {
+  padding-right:1em;
+  color: #eee;
+}
+
+.navbar-inverse {
+	background-color: #333;
+}
+
+.navbar { border-radius: 0; }
+
+header { background: #333; color: #eee; }
+
+/* extra line height so that furigana does not affect vertical spacing */
+p { line-height: 1.8em; }
+
+p, th, td, li { font-size: 1.2em; }
+
+div.kanji { 
+	display: inline-block; 
+	border-radius: 20px; 
+	border: 1px solid #333;
+	padding: 20px;
+}
+
+div.kanji th, div.kanji td {
+	vertical-align: top;
+}
+
+div.kanji th {
+	font-size: 500%;
+	padding-right: 20px;
+}
+
+/* for article icons */
+.label-info {
+	border: #888 solid 1px;
+	color: #333;
+	background: #eee;
+}
+
+span.categories {
+	color: #666;
+	font-size: 80%;
+}
+
+div.color-swatch {
+	border-radius: 1em;
+	border: 1px solid #333;
+	padding: 1em;
+	display: inline-block;
+	margin-right: 1em;
+}
+
+div.color-swatch-inverse {
+	color: #fff;
+}
+
+.color-swatch th {
+	font-size: 200%;
+}
+

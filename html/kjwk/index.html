@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Kanji Naiwake</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/custom.css" type="text/css">
+	<link rel="stylesheet" href="../css/kjwk.css" type="text/css">
+	<link rel="stylesheet" href="../local-resources/maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+	<script src="../local-resources/ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../local-resources/maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../local-resources/gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+	<script src="../local-resources/cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" type="text/css">
+</head>
+<body>
+	<script src="../local-resources/cdn.rawgit.com/danang.priabada/kanji-dict.js"></script>
+	<script src="../js/kjwk-composition.js"></script>
+	<script src="../js/kjwk-radical-defs.js"></script>
+	<script src="../js/kjwk-ijidoukun.js"></script>
+	<script src="../js/kjwk-related.js"></script>
+	<script src="../js/kjwk-altforms.js"></script>
+	<script src="../js/kjwk-patch.js"></script>
+	<script src="../js/common.js"></script>
+<!-- No standard header for this page -->
+
+<!-- Main Container -->
+<div class="container-fluid">
+	<div class="row">
+		<!-- Visual Graph -->
+		<div class="col-xs-9 float-left remove-margin remove-padding">
+			<div style="position:relative">
+				<div id="visgraph" class="left portal"></div>
+				<!-- Lookup -->
+				<div id="lookup-group" class="input-group" >
+					<input id="lookup_kanji" type="text" class="form-control" onfocus="this.select();" aria-label="Search" placeholder="Search...">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button" onclick="lookup();" aria-label="Search">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
+					</span>
+				</div>
+
+				<!-- Suggest random -->
+				<button type="button" id="suggest-group" class="btn btn-default" onclick="chooseRandom();">お任せ (Randomize)</button>
+				<!-- Trigger the modal with a button -->
+				<button type="button" id="jlpt-group" class="btn btn-default" data-toggle="modal" data-target="#myJlptModal">JLPT</button>				
+				<!-- Trigger the modal with a button -->
+				<button type="button" id="help-group" class="btn btn-default" data-toggle="modal" data-target="#myModal">説明 (Explanation)</button>	
+
+				<!-- Modal Popup for JLPT level -->
+				<div id="myJlptModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">JLPT (Japanese-Language Proficiency Test)</h4>
+						</div>
+						<div class="modal-body">
+							<p>The JLPT is an official, standardized test to evaluate and certify Japanese language proficiency for non-native speakers. It covers reading and listening ability; writing and speaking are not covered</p>
+							<p>The JLPT has five levels: N1, N2, N3, N4 and N5. The easiest level is N5 and the most difficult level is N1</p>
+							<h2>Level</h2>
+							<h5>I am using the external link that provide more information, Im not reinvent the wheel.</h5>
+							<h5>(Click the level to see list of words)</h5>
+							<div id="legend" class="portal">
+								
+								<p class="jlpt-level-one"><a href="https://japandict.com/lists/jlpt/jlpt1" target="_blank">N1 The ability to understand Japanese used in a variety of circumstances (Beginer)</a></p>
+								<p class="jlpt-level-two"><a href="https://japandict.com/lists/jlpt/jlpt2" target="_blank">N2 The ability to understand Japanese used in everyday situations, and in a variety of circumstances to a certain degree (Basic)</a></p>
+								<p class="jlpt-level-three"><a href="https://japandict.com/lists/jlpt/jlpt3" target="_blank">N3 The ability to understand Japanese used in everyday situations to a certain degree (Lower Intermediate)</a></p>
+								<p class="jlpt-level-four"><a href="https://japandict.com/lists/jlpt/jlpt4" target="_blank">N4 The ability to understand basic Japanese (Intermediate)</a></p>
+								<p class="jlpt-level-five"><a href="https://japandict.com/lists/jlpt/jlpt5" target="_blank">N5 The ability to understand some basic Japanese (Advance)</a></p>
+							</div>	
+																					
+						</div>
+						
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div> <!-- /modal-content -->
+					</div> <!-- /modal-dialog -->
+				</div> <!-- /myModal -->
+				
+				<!-- Modal Popup parade of divs for help/info overlay -->
+				<div id="myModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">About 漢字内訳 (Kanji Breakdown)</h4>
+						</div>
+						<div class="modal-body">		
+							<p><b>Click</b> on any kanji to show dictionary information; <b>double-click</b> to make that kanji the main one.</p>
+							<p>I built this tool to explore all components of kanji &mdash; not just radicals &mdash; and find relations to other kanji. For example, 塾 and 熟 have different radicals, but have 11 strokes in common: a third kanji (孰) with the same onyomi (ジュク) as the others.</p>
+							<p>A component could convey sound or meaning; or it could be a result of changes and simplifications over time. This tool looks purely at visual connections and avoids making deeper and complex conclusions that could be wrong. It does point out:</p>
+							<ul>
+							<li>Shared onyomi or shared kunyomi + meaning</li>
+							<li>Alternate forms of radical</li>
+							</ul>
+							<p>At least two similar sites are worth checking out, these site will gave you more complex result:</p>
+							<ul>
+							<li><a href="http://suiren.io/" target="_blank">Suiren</a> (hop between compounds) &mdash; currently not available</li>
+							<li><a href="https://thekanjimap.com/index.html" target="_blank">The Kanji Map</a> (similar to this tool, and was there first)</li>
+							</ul>
+							<p>Not everyone can afford to pay for paid japanese lesson. I want to give these people another option. If someone wants education, they should be able to get it.</p>
+							<h2>Legend</h2>
+							<div id="legend" class="portal">
+								<p class="kanji-main">Main Kanji</p>
+								<p class="kanji-other">Part of Main</p>
+								<p class="kanji-partof">Contains Main</p>
+								<p class="kanji-radical">Radical of Main</p>
+								<p class="kanji-shared-onyomi">Shared 音読み with Main</p>
+								<p class="kanji-ijidoukun">Shared 訓読み and meaning with Main</p>
+								<p class="kanji-no-dict">No dictionary info</p>
+							</div>																				
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div> <!-- /modal-content -->
+					</div> <!-- /modal-dialog -->
+				</div> <!-- /myModal -->
+
+				<!-- Modal for kanji not found -->
+				<div id="modalNotFound" class="modal fade" role="dialog" tabindex="-1">
+				  <div class="modal-dialog" role="document">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">申し訳ありません, no kanji found</h4>
+					  </div>
+					  <div class="modal-body">
+					  The search term "<span id='notFoundString'>placeholder</span>" does not have any kanji this tool knows about. It does know all the jouyou kanji and a few more &mdash; about 2,500 total. Try the <b>"お任せ"</b> button to see an example.
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					  </div>
+					</div> <!-- /modal-content -->
+				  </div> <!-- /modal-dialog -->
+				</div> <!-- /modalNotFound -->
+			</div>
+		</div>
+		<div id="side-panel" class="col-xs-3 float-right border-line" style="position:relative">
+			<div class="right row">
+				<!-- <div class="kjwk-head">
+					<h1>ダナンの<span class="red">日本語</span></h1>
+					<h2>漢字内訳 - Kanji Breakdown</h2>
+				</div> -->
+				<div>
+					<table>
+					<tr>
+					<td id="kanji777"></td>
+					<td style="padding-left: 1em; padding-top: 2em;">
+						<span id="jouyou-yesno" class="kanji-group-indicator">常用</span>
+						<br/>
+							<a id="jisho-link" target="_blank" href="">jisho</a>
+						<br/>
+							<a id="kanshudo-link" target="_blank" href="#">kanshudo</a>
+						<br/>
+							<a id="wiktionary-link" target="_blank" href="#">wiktionary</a>						
+					</td>					
+					</tr>
+					</table>
+				</div>
+				<div id="details">
+					<table class="table right">
+						<tr>
+							<th class="hovertext" data-hover="Onyomi">音読み</th>
+							<td id="onyomi" style="width: 100%"></td>
+						</tr>						
+						<tr>
+							<th class="hovertext" data-hover="Kunyomi">訓読み</th>
+							<td id="kunyomi" style="width: 100%"></td>
+						</tr>
+						<tr>
+							<th class="hovertext" data-hover="Jouyou ">常用</th>
+							<td id="isjouyou" style="width: 100%"></td>
+						</tr>
+						<tr>
+							<th class="hovertext" data-hover="Meanings">意味</th>
+							<td id="meanings" style="width: 100%"></td>
+						</tr>
+						<tr>
+							<th class="hovertext" data-hover="Relation">関係</th>
+							<td id="relation" style="width: 100%"></td>
+						</tr>
+					</table>
+				</div>	
+				<div id="row-data" class="row" style="padding-left: 3%; padding-right: 3%;">
+					<table class="table">
+						<tr>
+						<th style="word-break: keep-all" class="hovertext" data-hover="Exploration">探索した</th>
+						<td style="width:100%" id="looked_up"></td>
+						</tr>
+						<tr>
+						<th style="word-break: keep-all" class="hovertext" data-hover="Recently">最近</th>
+						<td style="width:100%" id="recent"></td>
+						</tr>
+					</table>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../js/kjwk-logic.js"></script>
+</body>
+</html>
