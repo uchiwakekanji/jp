@@ -4,6 +4,7 @@ import io
 
 #"""Builds the kanji composition json file"""
 
+#This script will be generate the kjwk-composition.js that basicly the main structure of visual graph
 input_file = 'C:/xampp/htdocs/jp/raw/kanji-composition-map.txt'
 output_file = 'C:/xampp/htdocs/jp/html/js/kjwk-composition.js'
 composition = {}
