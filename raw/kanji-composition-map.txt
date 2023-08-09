@@ -41,13 +41,13 @@
 因: 口 大 #verified
 姻: 女 因 #verified
 引: 弓 丨 #verified
-飲: 飠 欠
-院: ⻖ 完
-隠: ⻖ 㥯
-韻: 音 員
-宇: 扌 于
-渦: 氵 咼
-浦: 氵 甫
+飲: 飠 欠 #verified
+院: ⻖ 完 #verified
+隠: ⻖ 㥯 #verified
+韻: 音 員 #verified
+宇: 扌 于 #verified
+渦: 氵 咼 #verified
+浦: 氵 甫 #verified
 運: ⻌ 軍
 雲: 雨 云
 営: 呂 ⺍ 冖
