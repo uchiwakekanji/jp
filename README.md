@@ -1,6 +1,6 @@
 # Kanji-Uchiwake
 
-![alt text](https://github.com/uchiwakekanji/jp/tree/main/html/local-resources/images/capture-app.jpg)
+![alt text](https://github.com/uchiwakekanji/jp/tree/main/html/local-resources/images/capture-app.jpg?raw=true)
 
 This Javascript app displays a kanji character's "exploded view" -- all components subdivided -- with associations to related kanji sharing those components.
 
