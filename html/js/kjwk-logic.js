@@ -523,7 +523,7 @@ function reset_graph(kanji) {
 	});
 
 	network.selectNodes([1]);
-	document.title = "Kanji Uchiwake : " + kanji;
+	document.title = "Uchiwake Kanji : " + kanji;
 	// push state only if we are not here due to a popped state
 	if (poppedState) {
 		poppedState = false;
