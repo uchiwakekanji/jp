@@ -226,6 +226,7 @@ td { vertical-align: top; }
 	left: 1em; 
 	top: 1em; 
 	width: 30em;
+	margin-top: 1%;
 }
 
 /*Randomize*/
@@ -236,6 +237,7 @@ td { vertical-align: top; }
 	z-index: 1;
 	left: 1em; 
 	top: 4em;
+	margin-top: 1%;
 }
 
 /*Explanation*/
@@ -245,7 +247,8 @@ td { vertical-align: top; }
 	position: absolute;
 	z-index: 1;
 	right: 1em; 
-	top: 1em; 
+	top: 1em;
+	margin-top: 1%;
 }
 
 /*JLPT*/
@@ -255,7 +258,8 @@ td { vertical-align: top; }
 	position: absolute;
 	z-index: 2;
 	right: 11.5em; 
-	top: 1em; 
+	top: 1em;
+	margin-top: 1%;
 }
 
 #side-panel {
