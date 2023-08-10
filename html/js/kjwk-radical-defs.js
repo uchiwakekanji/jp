@@ -2,6 +2,7 @@
 // position in the array is Kangxi radical index (1 to 214)
 // mostly generated from source except fixups for left and right mound/city radical
 // this file also used for identify the variant radicals
+// it will display in canvas as "異字部首 (variant radicals)"
 var radical_list = [
 {
 	"rad": ["zero"],
@@ -24,7 +25,7 @@ var radical_list = [
 	"def": "bend, possessive particle no (の no, ノ)" 
 },
 {
-	"rad": ["乙", "乚"],
+	"rad": ["乙", "乚", "⺄", "乛"],
 	"def": "second, latter (おつ otsu, 乙)" 
 },
 {

@@ -1,6 +1,6 @@
 // different kanji with the same Japanese reading (and usu. a similar meaning)
 // this variable will be consume by function addIjidoukun. See : kjwk-logic.js
-// it will display in canvas as "同訓 (shared kun and meaning)""
+// it will display in canvas as "同訓 (shared kun and meaning)"
 var ijidoukun = [
     {
         "kanji": [
