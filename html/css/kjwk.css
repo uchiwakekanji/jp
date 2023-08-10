@@ -109,7 +109,8 @@ h1, h2 {
 
 #details table th {
 	color: #607f3a;
-	font-weight: 600;
+	font-size: 135%;
+	font-weight: 510;
 	white-space: nowrap;
 	vertical-align: top;
 }
@@ -126,7 +127,8 @@ h1, h2 {
 
 #row-data table th {
 	color: #607f3a;
-	font-weight: 600;
+	font-size: 135%;
+	font-weight: 510;
 	white-space: nowrap;
 	vertical-align: top;
 }
@@ -144,7 +146,7 @@ h1, h2 {
 #kanji777 {
 	padding-left: 0.25em;
 	padding-top: 0;
-	font-size: 8em;
+	font-size: 8.5em;
 }
 
 #legend p {
