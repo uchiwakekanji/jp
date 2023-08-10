@@ -3,6 +3,7 @@
 // mostly generated from source except fixups for left and right mound/city radical
 // this file also used for identify the variant radicals
 // it will display in canvas as "異字部首 (variant radicals)"
+// last verify 11 aug 2023
 var radical_list = [
 {
 	"rad": ["zero"],
@@ -125,7 +126,7 @@ var radical_list = [
 	"def": "again, right hand (また mata)" 
 },
 {
-	"rad": ["口"],
+	"rad": ["口", "品"],
 	"def": "mouth, opening (くち kuchi)" 
 },
 {
@@ -161,7 +162,7 @@ var radical_list = [
 	"def": "woman, female (おんな onna)" 
 },
 {
-	"rad": ["子"],
+	"rad": ["子", "孑"],
 	"def": "child, seed (こ ko)" 
 },
 {
@@ -213,7 +214,7 @@ var radical_list = [
 	"def": "dry (ほし hoshi)" 
 },
 {
-	"rad": ["幺"],
+	"rad": ["幺", "乡"],
 	"def": "short thread (いとがしら itogashira, 糸頭)" 
 },
 {
@@ -225,7 +226,7 @@ var radical_list = [
 	"def": "long stride (いんにょう innyō, 延繞)" 
 },
 {
-	"rad": ["廾"],
+	"rad": ["廾", "廿"],
 	"def": "two hands, twenty (にじゅうあし nijūashi, 二十脚)" 
 },
 {
@@ -521,7 +522,7 @@ var radical_list = [
 	"def": "ear (みみ mimi)" 
 },
 {
-	"rad": ["聿", "⺻"],
+	"rad": ["聿", "肀", "⺻"],
 	"def": "brush (ふでづくり fudezukuri, 聿旁)" 
 },
 {
@@ -565,7 +566,7 @@ var radical_list = [
 	"def": "colour, prettiness (いろ iro)" 
 },
 {
-	"rad": ["艹", "艸", "䒑"],
+	"rad": ["艹", "艸", "䒑", "丷"],
 	"def": "grass, vegetation (くさ kusa, 草)" 
 },
 {
@@ -845,7 +846,7 @@ var radical_list = [
 	"def": "nose (はな hana)" 
 },
 {
-	"rad": ["齊"],
+	"rad": ["斉", "齊"],
 	"def": "even, uniformly (せい sei, 斉)" 
 },
 {
