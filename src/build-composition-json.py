@@ -10,7 +10,7 @@ output_file = 'C:/xampp/htdocs/jp/html/js/kjwk-composition.js'
 composition = {}
 
 # "r" stand for read
-with open(input_file, "r", encoding="utf8") as fp:
+with io.open(input_file, "r", encoding="utf8") as fp:
     lines = fp.readlines()
 
 for line in lines:
