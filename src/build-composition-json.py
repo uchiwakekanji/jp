@@ -32,4 +32,6 @@ with io.open(output_file, "w", encoding='utf8') as fp:
     fp.write("kanji_parts = ")
     # for debug, use indent=4; for production, leave it minified -> json.dump(composition, fp, ensure_ascii=False, indent=4)
     # ensure_ascii -> False (Print the kanji as is); True (print the kanji as unicode)
+    print("INFO", "Clear browser cache to load new kjwk-composition.js", sep=" - ")
     json.dump(composition, fp, ensure_ascii=False)
+   

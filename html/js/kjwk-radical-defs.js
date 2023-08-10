@@ -1,7 +1,7 @@
-// From https://en.wikipedia.org/wiki/List_of_kanji_radicals_by_stroke_count
-// Position in the array is Kangxi radical index (1 to 214)
-// Mostly generated from source except fixups for left and right mound/city radical
-// This file also used for identify the variant radicals
+// from https://en.wikipedia.org/wiki/List_of_kanji_radicals_by_stroke_count
+// position in the array is Kangxi radical index (1 to 214)
+// mostly generated from source except fixups for left and right mound/city radical
+// this file also used for identify the variant radicals
 var radical_list = [
 {
 	"rad": ["zero"],

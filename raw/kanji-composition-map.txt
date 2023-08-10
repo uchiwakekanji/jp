@@ -51,6 +51,7 @@
 渦: 氵 咼 #verified
 浦: 氵 甫 #verified
 運: ⻌ 軍
+豸: 
 雲: 雨 云
 営: 呂 ⺍ 冖
 影: 景 彡
@@ -1230,6 +1231,8 @@
 端: 立 耑
 胆: 肉 旦
 誕: 訁 延
+貊: 豸 百
+辶: #is0
 鍛: 釒 段
 団: 囗 寸
 壇: 土 亶
@@ -2533,3 +2536,5 @@
 𠙵: 凵 一 #verified
 上: ⺊ 一 #verified
 从: 人 #double #verified
+龠: 亼 𠱠 𠕁 #verified
+虍: ⺊ 乛 丿 七 #verified

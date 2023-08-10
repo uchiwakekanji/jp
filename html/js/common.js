@@ -70,7 +70,7 @@ $(function() {
 			}
 
 			// Write
-
+			
 			if (arguments.length > 1) {
 				attributes = extend({
 					path: '/'

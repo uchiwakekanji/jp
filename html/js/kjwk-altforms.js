@@ -1,4 +1,6 @@
 // related kanji where primary key is the more usual or standard choice
+// this variable will be consume by function addAltForms. See : kjwk-logic.js
+// it will display in canvas as "異字 (different characters)" 
 var altforms = {
 	"陥": {
 		"落": {
