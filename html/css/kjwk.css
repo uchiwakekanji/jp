@@ -108,6 +108,8 @@ h1, h2 {
  */
 
 #details table th {
+	color: #607f3a;
+	font-weight: 600;
 	white-space: nowrap;
 	vertical-align: top;
 }
@@ -123,6 +125,8 @@ h1, h2 {
 }
 
 #row-data table th {
+	color: #607f3a;
+	font-weight: 600;
 	white-space: nowrap;
 	vertical-align: top;
 }
@@ -213,6 +217,8 @@ td { vertical-align: top; }
 
 /*Search Bar*/
 #lookup-group {
+	font-size: medium;
+	color: #b64630;
 	position: absolute;
 	z-index: 1;
 	left: 1em; 
@@ -222,6 +228,8 @@ td { vertical-align: top; }
 
 /*Randomize*/
 #suggest-group {
+	font-size: medium;
+	color: #000000;
 	position: absolute;
 	z-index: 1;
 	left: 1em; 
@@ -230,6 +238,8 @@ td { vertical-align: top; }
 
 /*Explanation*/
 #help-group {
+	font-size: medium;
+	color: #000000;
 	position: absolute;
 	z-index: 1;
 	right: 1em; 
@@ -238,6 +248,8 @@ td { vertical-align: top; }
 
 /*JLPT*/
 #jlpt-group {
+	font-size: medium;
+	color: #000000;
 	position: absolute;
 	z-index: 2;
 	right: 11.5em; 
