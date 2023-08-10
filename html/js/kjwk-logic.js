@@ -423,8 +423,9 @@ function update_details(kanji) {
 	}
 	// even if we have no definition, still build external links to jisho.org, kanshudo.com and wiktionary.org
 	$('#jisho-link').attr("href", "https://jisho.org/search/" + kanji + "%20%23kanji");
+	$('#kanjialive-link').attr("href", "https://app.kanjialive.com/" + kanji);
 	$('#wiktionary-link').attr("href", "https://en.wiktionary.org/wiki/" + kanji);
-	$('#kanshudo-link').attr("href", "https://www.kanshudo.com/kanji/" + kanji);
+	//$('#kanshudo-link').attr("href", "https://www.kanshudo.com/kanji/" + kanji);
 }
 
 // keep most recently used list of kanji, newest first

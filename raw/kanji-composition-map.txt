@@ -8,48 +8,48 @@
 哀: 衣 亠 口 #verified
 愛: 心 爪 冖 夂 #verified
 悪: 心 亜 #verified
-握: 扌 屋 #verified
-圧: 厂 土 #verified
-扱: 扌 及 #verified
-安: 宀 女 #verified
-暗: 音 日 #verified
-案: 安 木 #verified
-以: 丶 人 #verified
-位: 亻 立 #verified
-依: 亻 衣 #verified
-偉: 亻 韋 #verified
-囲: 井 口 #verified
-委: 禾 女 #verified
-威: 女 戌 #verified
-尉: 尸 示 寸 #is3 #verified
-意: 音 心 #verified
-慰: 尉 心 #verified
-易: 日 勿 #verified
-異: 田 井 #verified
-移: 禾 多 #verified
-維: 糸 隹 #verified
-緯: 糸 韋 #verified
-胃: 田 月 #verified
-違: ⻌ 韋 #verified
-遺: ⻌ 貴 #verified
-医: 匸 矢 #verified
-域: 土 或 #verified
-育: 𠫓 肉 #verified
-壱: 匕 士 冖 #verified
-逸: ⻌ 免 #verified
-稲: 禾 日 #verified
-芋: 艹 于 #verified
-員: 貝 口 #verified
-因: 口 大 #verified
-姻: 女 因 #verified
-引: 弓 丨 #verified
-飲: 飠 欠 #verified
-院: ⻖ 完 #verified
-隠: ⻖ 㥯 #verified
-韻: 音 員 #verified
-宇: 扌 于 #verified
-渦: 氵 咼 #verified
-浦: 氵 甫 #verified
+握: 扌 屋
+圧: 厂 土
+扱: 扌 及
+安: 宀 女
+暗: 音 日
+案: 安 木
+以: 𠄌 丶 人 #verified
+位: 亻 立
+依: 亻 衣
+偉: 亻 韋
+囲: 井 口
+委: 禾 女
+威: 女 戌
+尉: 尸 示 寸 #is3
+意: 音 心
+慰: 尉 心
+易: 日 勿
+異: 田 井
+移: 禾 多
+維: 糸 隹
+緯: 糸 韋
+胃: 田 月
+違: ⻌ 韋
+遺: ⻌ 貴
+医: 匸 矢
+域: 土 或
+育: 𠫓 肉
+壱: 匕 士 冖
+逸: ⻌ 免
+稲: 禾 日
+芋: 艹 于
+員: 貝 口
+因: 口 大
+姻: 女 因
+引: 弓 丨
+飲: 飠 欠
+院: ⻖ 完
+隠: ⻖ 㥯
+韻: 音 員
+宇: 扌 于
+渦: 氵 咼
+浦: 氵 甫
 運: ⻌ 軍
 豸: 
 雲: 雨 云
