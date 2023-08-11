@@ -9,6 +9,10 @@
 	In the HTML page, include this script after all the above scripts and definitions.
 */
 
+// you can verify the kanji is jouyou or not by find the list here http://nihongo.monash.edu/jouyoukanji.html
+
+https://kanjicards.org/kanji-list-by-grade.html
+
 // Town and mound radicals (which look the same) were under multiple Unicode points
 // u+2ed6
 kanji_defs['⻖'] = {
@@ -42,3 +46,17 @@ radical_list[61] = {
 	"rad": ["心", "忄", "㣺"],
 	"def": "heart (りっしんべん risshinben, 立心偏)"
 }
+// U+3e78 https://www.compart.com/en/unicode/U+3E78
+kanji_defs['㹸'] = { // https://kanji.jitenon.jp/kanjiy/20649.html
+    "on_readings": [
+        "ボウ"
+    ],
+    "kun_readings": [""],
+    "meanings": [
+        "looks", "looks", "features"
+    ],
+    "grade": 0, //we have no information
+    "is_jouyou": true,
+    "radical": 153
+}
+//

@@ -1,8 +1,9 @@
 # Define kanji composition by parts, with many manually hand edits and judgment calls.
 # Convert to JS file using build-composition-json.py
-# From https://en.wiktionary.org/wiki/ search the composition part
-# #double = repition of the kanji; #verified = already verified manually
+# From https://kanji.jitenon.jp/ search the 漢字構成 part
+皃: 白 儿 #verified
 貌: 豸 皃 #verified
+㹸: 犭 皃 #verified
 舷: 舟 玄 #verified
 椅: 木 奇 #verified
 哀: 衣 亠 口 #verified

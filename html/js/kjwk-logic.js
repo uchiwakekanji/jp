@@ -423,8 +423,15 @@ function update_details(kanji) {
 	}
 	// even if we have no definition, still build external links to jisho.org, kanshudo.com and wiktionary.org
 	$('#jisho-link').attr("href", "https://jisho.org/search/" + kanji + "%20%23kanji");
-	$('#kanjialive-link').attr("href", "https://app.kanjialive.com/" + kanji);
+
+	// for jitenon, we split manually the encoded kanji, because when you used direct encodeURIComponent() it won't work
+	const encodedString = encodeURIComponent(kanji);
+	const splitArray = encodedString.split('%');
+	const filteredArray = splitArray.filter(part => part !== '');
+	$('#jitenon-link').attr("href", "https://jitenon.com/kanji/" + "%" + filteredArray[0] + "%" + filteredArray[1] + "%" + filteredArray[2]);
+	
 	$('#wiktionary-link').attr("href", "https://en.wiktionary.org/wiki/" + kanji);
+	//$('#kanjialive-link').attr("href", "https://app.kanjialive.com/" + kanji);
 	//$('#kanshudo-link').attr("href", "https://www.kanshudo.com/kanji/" + kanji);
 }
 
