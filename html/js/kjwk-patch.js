@@ -10,25 +10,6 @@
 	if you not found the character kanji, usually the char kanji is CJK basic and compound strokes (see : kjwk-cjk-stokes.js)
 */
 
-// Town and mound radicals (which look the same) were under multiple Unicode points
-// u+2ed6
-kanji_defs['⻖'] = {
-	"on_readings": [],
-	"kun_readings": [],
-	"meanings": [
-		"mound radical (left)"
-	],
-	"is_jouyou": false,
-};
-// u+2ecf
-kanji_defs['⻏'] = {
-	"on_readings": [],
-	"kun_readings": [],
-	"meanings": [
-		"town radical (right)"
-	],
-	"is_jouyou": false,
-};
 // there was no definition for this radical
 kanji_defs['訁'] = {
 	"on_readings": [],
