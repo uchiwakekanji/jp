@@ -1,6 +1,6 @@
 # Define kanji composition by parts, with many manually hand edits and judgment calls.
 # Convert to JS file using build-composition-json.py
-# From https://kanji.jitenon.jp/ search the 漢字構成 part
+# From https://kanji.jitenon.jp/ search the 漢字構成 part or you can find here too https://en.wiktionary.org/ find the composition
 皃: 白 儿 #verified
 貌: 豸 皃 #verified
 㹸: 犭 皃 #verified
@@ -35,7 +35,7 @@
 遺: ⻌ 貴
 医: 匸 矢
 域: 土 或
-育: 𠫓 肉
+育: 亠 厶 月 #verified
 壱: 匕 士 冖
 逸: ⻌ 免
 稲: 禾 日
@@ -130,7 +130,7 @@
 過: ⻌ 咼
 蚊: 虫 文
 我: 手 戈
-画: 凵 田
+画: 一 凵 田 #verified
 芽: 艹 牙
 賀: 加 貝
 雅: 牙 隹
@@ -260,9 +260,9 @@
 危: 厃 㔾 #also related to 厄
 喜: 口 壴
 壴: 士 豆
-器: 口 大
+器: 口 大 #ver
 基: 土 其
-奇: 大 可
+奇: 大 可 #verified
 寄: 宀 奇
 岐: 山 支
 希: 㐅 布
@@ -1219,7 +1219,7 @@
 隊: ⻖ 㒸
 代: 亻 弋
 台: 厶 口
-大: #is0
+大: 一 人 #verified 
 第: ⺮ 弓
 題: 是 頁
 滝: 氵 竜
@@ -1490,7 +1490,7 @@
 派: 氵 𠂢
 破: 石 皮
 婆: 波 女
-馬: 三 丨 灬 #is3
+馬: ㇉ 三 丨 灬 #verified
 俳: 亻 非
 廃: 广 発
 拝: 扌 一 丰 #is3
@@ -2246,7 +2246,7 @@
 杂: 九 朩
 于: 丁 一
 乎: #is0
-訁: 亖 口
+訁: 亖 口 #buggy
 咅: 立 口
 亢: 亠 几
 涂: 氵 余
@@ -2278,7 +2278,7 @@
 𠂇: #is0
 曰: 囗 一
 卉: 十 廾
-几: #is0
+几: 丿 ㇈ #verified
 介: 人 丿 丨
 朩: #is0
 㑒: #is0; it's a shinjitai
@@ -2556,3 +2556,4 @@
 从: 人 #double #verified
 龠: 亼 𠱠 𠕁 #verified
 虍: ⺊ 乛 丿 七 #verified
+𡰪: #is0

@@ -3,6 +3,7 @@
  Makes sense only if jQuery is loaded.
 */
 
+/* experimental */
 function showFurigana(wantVisible) {
 	var display = wantVisible ? 'ruby-text' : 'none';
 	$('rt').css('display', display);
@@ -69,8 +70,7 @@ $(function() {
 				return;
 			}
 
-			// Write
-			
+			// Write			
 			if (arguments.length > 1) {
 				attributes = extend({
 					path: '/'
@@ -110,7 +110,6 @@ $(function() {
 			}
 
 			// Read
-
 			if (!key) {
 				result = {};
 			}
