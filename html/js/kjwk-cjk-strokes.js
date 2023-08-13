@@ -121,6 +121,15 @@ kanji_defs['𠂇'] = {
 	],
 	"is_jouyou": false
 };
+//U+20003
+kanji_defs['𠀃'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Unified Ideograph-20003"
+	],
+	"is_jouyou": false
+};
 //U+4E37
 kanji_defs['丷'] = {
 	"on_readings": [],
@@ -542,6 +551,186 @@ kanji_defs['㐅'] = {
 	"kun_readings": [],
 	"meanings": [
 		"CJK Unified Ideograph-3405"
+	],
+	"is_jouyou": false
+};
+//U+31CA
+kanji_defs['㇊'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke Hzt"
+	],
+	"is_jouyou": false
+};
+//U+31CB
+kanji_defs['㇋'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke Hzzp"
+	],
+	"is_jouyou": false
+};
+//U+31CC
+kanji_defs['㇌'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke Hpwg"
+	],
+	"is_jouyou": false
+};
+//U+31CD
+kanji_defs['㇍'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke Hzw"
+	],
+	"is_jouyou": false
+};
+//U+31CE
+kanji_defs['㇎'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke Hzzz"
+	],
+	"is_jouyou": false
+};
+//U+31CF
+kanji_defs['㇏'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke N"
+	],
+	"is_jouyou": false
+};
+//U+31D0
+kanji_defs['㇐'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke H"
+	],
+	"is_jouyou": false
+};
+//U+31D1
+kanji_defs['㇑'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke S"
+	],
+	"is_jouyou": false
+};
+//U+31D2
+kanji_defs['㇒'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke P"
+	],
+	"is_jouyou": false
+};
+//U+31D3
+kanji_defs['㇓'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke Sp"
+	],
+	"is_jouyou": false
+};
+//U+31D4
+kanji_defs['㇔'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke D"
+	],
+	"is_jouyou": false
+};
+//U+31D5
+kanji_defs['㇕'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke Hz"
+	],
+	"is_jouyou": false
+};
+//U+31D7
+kanji_defs['㇗'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke Sz"
+	],
+	"is_jouyou": false
+};
+//U+31D8
+kanji_defs['㇘'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke Swz"
+	],
+	"is_jouyou": false
+};
+//U+31D9
+kanji_defs['㇙'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Stroke St"
+	],
+	"is_jouyou": false
+};
+//U+5939
+kanji_defs['夹'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Unified Ideograph-5939"
+	],
+	"is_jouyou": false
+};
+//U+2E80
+kanji_defs['⺀'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"repeat radical (CJK)"
+	],
+	"is_jouyou": false
+};
+//U+5174
+kanji_defs['兴'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Unified Ideograph-5174"
+	],
+	"is_jouyou": false
+};
+//U+8080
+kanji_defs['肀'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Unified Ideograph-8080"
+	],
+	"is_jouyou": false
+};
+//U+6237
+kanji_defs['户'] = {
+	"on_readings": [],
+	"kun_readings": [],
+	"meanings": [
+		"CJK Unified Ideograph-6237"
 	],
 	"is_jouyou": false
 };
