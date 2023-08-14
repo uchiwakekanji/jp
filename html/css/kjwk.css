@@ -120,6 +120,12 @@ td { vertical-align: top; }
         margin-bottom: 5%;
     }
 
+    .right-side-scroll {
+        overflow-y: scroll;
+        height: 100%;
+        display:block;
+    }
+
 }
 
 /* sm */
@@ -157,6 +163,12 @@ td { vertical-align: top; }
         margin-bottom: 2%;
     }
 
+    .right-side-scroll {
+        overflow-y: scroll;
+        height: 100%;
+        display:block;
+    }
+
 }
 
 /* md */
@@ -192,6 +204,12 @@ td { vertical-align: top; }
     .additional-info {
         margin-top: 1%;
         margin-bottom: 1%;
+    }
+
+    .right-side-scroll {
+        overflow-y: scroll;
+        height: 100%;
+        display:block;
     }
 
 }
@@ -235,10 +253,8 @@ td { vertical-align: top; }
     }
 
     .right-side-scroll {
-        position: relative;
         margin-top: -3%;
         overflow-y: scroll;
-        overflow:hidden;
         height: 98%;
         display:block;
     }
