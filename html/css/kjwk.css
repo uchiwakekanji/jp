@@ -123,17 +123,12 @@ td { vertical-align: top; }
         margin-top: 5%;
         margin-bottom: 5%;
     }
-
-    .right-side {
-        margin-top: 2%;
-        overflow-y: scroll;
-        height: 100vh
-    }
+    
 }
 
 /* sm */
 @media screen and (min-width: 768px) {
-    
+
     #kanji777 {
         text-align: center;
         font-size: 10em;
@@ -166,11 +161,6 @@ td { vertical-align: top; }
         margin-bottom: 2%;
     }
 
-    .right-side {
-        margin-top: 2%;
-        overflow-y: scroll;
-        height: 100vh
-    }
 }
 
 /* md */
@@ -208,11 +198,6 @@ td { vertical-align: top; }
         margin-bottom: 1%;
     }
 
-    .right-side {
-        margin-top: -2.5%;
-        overflow-y: scroll;
-        height: 100vh
-    }
 }
 
 /* lg */
@@ -251,10 +236,6 @@ td { vertical-align: top; }
         margin-top: 1%;
         margin-bottom: 1%;
         margin-left: 41%;
-    }
-
-    .right-side {
-        margin-top: -3%;
     }
 
     .right-side-scroll {
