@@ -88,6 +88,10 @@ td { vertical-align: top; }
 /* xs < 768 */
 @media screen and (max-width: 767px) {
 
+    #help-group {
+        margin-bottom: 5%;
+    }
+
     #kanji777 {
         text-align: center;
         font-size: 10em;
@@ -129,7 +133,7 @@ td { vertical-align: top; }
 
 /* sm */
 @media screen and (min-width: 768px) {
-
+    
     #kanji777 {
         text-align: center;
         font-size: 10em;
