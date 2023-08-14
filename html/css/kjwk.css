@@ -120,7 +120,8 @@ td { vertical-align: top; }
         margin-bottom: 5%;
     }
 
-    .right-side-scroll {
+    .right-side-sub-scroll {
+        max-height: 10%;
         overflow-y: scroll;
         height: 100%;
         display:block;
@@ -163,7 +164,8 @@ td { vertical-align: top; }
         margin-bottom: 2%;
     }
 
-    .right-side-scroll {
+    .right-side-sub-scroll {
+        max-height: 10%;
         overflow-y: scroll;
         height: 100%;
         display:block;
@@ -206,7 +208,8 @@ td { vertical-align: top; }
         margin-bottom: 1%;
     }
 
-    .right-side-scroll {
+    .right-side-sub-scroll {
+        max-height: 10%;
         overflow-y: scroll;
         height: 100%;
         display:block;
@@ -256,6 +259,13 @@ td { vertical-align: top; }
         margin-top: -3%;
         overflow-y: scroll;
         height: 98%;
+        display:block;
+    }
+
+    .right-side-sub-scroll {
+        max-height: 10%;
+        overflow-y: scroll;
+        height: 100%;
         display:block;
     }
 }
