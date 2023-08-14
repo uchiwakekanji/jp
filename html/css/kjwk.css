@@ -235,8 +235,10 @@ td { vertical-align: top; }
     }
 
     .right-side-scroll {
+        position: relative;
         margin-top: -3%;
         overflow-y: scroll;
+        overflow:hidden;
         height: 98%;
         display:block;
     }
