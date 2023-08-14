@@ -31,6 +31,10 @@ body, html {
 	vertical-align: top;
 }
 
+#row-data table tr td {
+	vertical-align: top;
+}
+
 #right-part table {
 	border-collapse: collapse;
 	border-spacing: 80px 4px;
@@ -68,6 +72,7 @@ body, html {
 .kanji-shared-onyomi {
 	background: #FFD9BA;
 }
+
 .kanji-no-dict {
 	border: 1px dashed #444 !important;
 	background: #FFBABA;
