@@ -123,6 +123,7 @@ td { vertical-align: top; }
     .right-side-sub-scroll {
         max-height: 10%;
         overflow-y: scroll;
+        overflow:auto;
         height: 100%;
         display:block;
     }
@@ -167,6 +168,7 @@ td { vertical-align: top; }
     .right-side-sub-scroll {
         max-height: 10%;
         overflow-y: scroll;
+        overflow:auto;
         height: 100%;
         display:block;
     }
@@ -211,6 +213,7 @@ td { vertical-align: top; }
     .right-side-sub-scroll {
         max-height: 10%;
         overflow-y: scroll;
+        overflow:auto;
         height: 100%;
         display:block;
     }
@@ -265,6 +268,7 @@ td { vertical-align: top; }
     .right-side-sub-scroll {
         max-height: 10%;
         overflow-y: scroll;
+        overflow:auto;
         height: 100%;
         display:block;
     }
