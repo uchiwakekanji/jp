@@ -1,6 +1,6 @@
 # Kanji-Uchiwake
 
-![alt text](https://raw.githubusercontent.com/uchiwakekanji/jp/main/html/local-resources/images/capture-app.jpg?raw=true)
+![alt text](https://github.com/uchiwakekanji/jp/blob/main/html/local-resources/images/capture-app.jpeg?raw=true)
 
 This Javascript app displays a kanji character's "breakdown view" -- all components subdivided -- with associations to related kanji sharing those components.
 
