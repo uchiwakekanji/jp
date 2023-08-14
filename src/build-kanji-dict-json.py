@@ -4,7 +4,7 @@ import xmltodict
 
 #"""Builds the kanji composition json file"""
 
-#This script will be generate the kanji-dict.js that basicly the main info of specific kanji (such as how to read in kunyomi an onyomi)
+#This script will be generate the kanji-dict.js that basicly the main info of specific kanji (such as how to read in kunyomi and onyomi)
 input_file = 'C:/xampp/htdocs/jp/raw/kanji-dict.txt'
 output_file = 'C:/xampp/htdocs/jp/html/js/kanji-dict.js'
 composition = {}

@@ -1,0 +1,81 @@
+{
+    "\u4e9c": {
+        "on_readings": "\u30a2",
+        "kun_readings": "\u3064.\u3050",
+        "meaning": [
+            "Asia",
+            "rank next",
+            "come after",
+            "-ous"
+        ],
+        "grade": "8",
+        "is_jouyou": "true",
+        "radical": "7"
+    },
+    "\u5516": {
+        "on_readings": [
+            "\u30a2",
+            "\u30a2\u30af"
+        ],
+        "kun_readings": "\u304a\u3057",
+        "meaning": [
+            "mute",
+            "dumb"
+        ],
+        "grade": "8",
+        "is_jouyou": "false",
+        "radical": "30"
+    },
+    "\u5a03": {
+        "on_readings": [
+            "\u30a2",
+            "\u30a2\u30a4",
+            "\u30ef"
+        ],
+        "kun_readings": "\u3046\u3064\u304f.\u3057\u3044",
+        "meaning": "beautiful",
+        "grade": "9",
+        "is_jouyou": "false",
+        "radical": "38"
+    },
+    "\u963f": {
+        "on_readings": [
+            "\u30a2",
+            "\u30aa"
+        ],
+        "kun_readings": [
+            "\u304a\u3082\u306d.\u308b",
+            "\u304f\u307e"
+        ],
+        "meaning": [
+            "Africa",
+            "flatter",
+            "fawn upon",
+            "corner",
+            "nook",
+            "recess"
+        ],
+        "grade": "9",
+        "is_jouyou": "true",
+        "radical": "170"
+    },
+    "\u54c0": {
+        "on_readings": "\u30a2\u30a4",
+        "kun_readings": [
+            "\u3042\u308f.\u308c",
+            "\u3042\u308f.\u308c\u3080",
+            "\u304b\u306a.\u3057\u3044"
+        ],
+        "meaning": [
+            "pathetic",
+            "grief",
+            "sorrow",
+            "pathos",
+            "pity",
+            "sympathize"
+        ],
+        "grade": "8",
+        "is_jouyou": "true",
+        "radical": "30"
+    }
+}
