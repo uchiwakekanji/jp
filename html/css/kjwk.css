@@ -31,10 +31,6 @@ body, html {
 	vertical-align: top;
 }
 
-#row-data table tr td {
-	vertical-align: top;
-}
-
 #right-part table {
 	border-collapse: collapse;
 	border-spacing: 80px 4px;
@@ -123,7 +119,7 @@ td { vertical-align: top; }
         margin-top: 5%;
         margin-bottom: 5%;
     }
-    
+
 }
 
 /* sm */
