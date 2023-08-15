@@ -7,8 +7,8 @@ import pdb
 
 #"""Builds the kanji dict json file"""
 # Input and output file paths
-#input_file = 'C:/xampp/htdocs/jp/src/experimental/in/kanjidic2.xml'
-input_file = 'C:/xampp/htdocs/jp/src/experimental/in/xml-sample-02.xml'
+input_file = 'C:/xampp/htdocs/jp/src/experimental/in/kanjidic2.xml'
+#input_file = 'C:/xampp/htdocs/jp/src/experimental/in/xml-sample-02.xml'
 output_file = 'C:/xampp/htdocs/jp/src/experimental/out/json-output.json'
 
 # Description of the script's purpose
@@ -74,23 +74,36 @@ xml_data = xmltodict.parse("".join(filtered))
 retn = dict()
 
 for o in range(len(xml_data['characters']['character'])):
+	# general fields parent
+	character_data = xml_data['characters']['character'][o]
 	
 	# define fields that has null posibility
 	misc_dict = xml_data['characters']['character'][o].get('misc', {})
+	reading_meaning = character_data.get('reading_meaning', {})
 	#pdb.set_trace()
 
-	# If 'misc' dictionary is None, set a default grade value of -1
+	# If 'misc_dict' dictionary is None, set a default value
 	if misc_dict is None:
 		is_jouyou = False # set default as False
 		grade = -1 # -1 mean grade is no defined
 	else:
 		grade = int(misc_dict.get('grade', -1))
-		is_jouyou = bool(xml_data['characters']['character'][o].get('misc', {}).get('is_jouyou', False))
+		is_jouyou = bool(misc_dict.get('is_jouyou', False))
+
+	# If 'reading_meaning' dictionary is None, set a default value
+	if reading_meaning is None:
+		on_readings = ''
+		kun_readings = ''
+		meaning = ''
+	else:
+		on_readings = reading_meaning.get('on_readings', '')
+		kun_readings = reading_meaning.get('kun_readings', '')
+		meaning = reading_meaning.get('meaning', '')
 		
 	retn[xml_data['characters']['character'][o]['literal']] = dict({
-		"on_readings": xml_data['characters']['character'][o]['reading_meaning']['on_readings'],
-		"kun_readings": xml_data['characters']['character'][o]['reading_meaning']['kun_readings'],
-		"meaning": xml_data['characters']['character'][o]['reading_meaning']['meaning'],
+		"on_readings": on_readings,
+		"kun_readings": kun_readings,
+		"meaning": meaning,
 		"grade": grade,
 		"is_jouyou": is_jouyou,
 		"radical": int(xml_data['characters']['character'][o]['radical'].get('classical', -1))
