@@ -12,7 +12,7 @@ output_file = 'C:/xampp/htdocs/jp/html/local-resources/cdn.rawgit.com/danang.pri
 
 # Description of the script's purpose
 # This script generates a JSON file containing main information about specific kanji, including readings and meanings.
-#This script will be generate the kanji-dict.js that basicly the main info of specific kanji (such as how to read in kunyomi and onyomi)
+# This script will be generate the kanji-dict.js that basicly the main info of specific kanji (such as how to read in kunyomi and onyomi)
 
 # Read the input XML file
 # "r" stand for read
@@ -73,10 +73,10 @@ xml_data = xmltodict.parse("".join(filtered))
 retn = dict()
 
 for o in range(len(xml_data['characters']['character'])):
-	# general fields parent
+	# General fields parent
 	character_data = xml_data['characters']['character'][o]
 	
-	# define fields that has null posibility
+	# Define fields that has null posibility
 	misc_dict = xml_data['characters']['character'][o].get('misc', {})
 	reading_meaning = character_data.get('reading_meaning', {})
 	radical = character_data.get('radical', {})
@@ -119,7 +119,7 @@ for o in range(len(xml_data['characters']['character'])):
 	})
 
 # Convert to JSON format
-# ensure_ascii -> False (Print the kanji as is); True (print the kanji as unicode)
+# Check ensure_ascii -> False (Print the kanji as is); True (print the kanji as unicode)
 json_data = json.dumps(retn, ensure_ascii=True, indent=4)
 
 # Remove the output file if it exists

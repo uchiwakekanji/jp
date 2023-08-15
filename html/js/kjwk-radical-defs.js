@@ -1,11 +1,13 @@
-// position in the array is Kangxi radical index (1 to 214)
-// mostly generated from source except fixups for left and right mound/city radical
-// this file also used for identify the variant radicals
-// it will display in canvas as "異字部首 (variant radicals)"
-// last verify 11 aug 2023
-// from https://en.wikipedia.org/wiki/List_of_kanji_radicals_by_stroke_count
-// from https://en.wikipedia.org/wiki/Kangxi_radical
-// from https://www.xiaoma.info/bushou.php?ext=1
+/*	Position in the array is Kangxi radical index (1 to 214)
+	mostly generated from source except fixups for left and right mound/city radical
+	this file also used for identify the variant radicals
+	it will display in canvas as "異字部首 (variant radicals)"
+	last verify 11 aug 2023
+	from https://en.wikipedia.org/wiki/List_of_kanji_radicals_by_stroke_count
+	from https://en.wikipedia.org/wiki/Kangxi_radical
+	from https://www.xiaoma.info/bushou.php?ext=1
+*/
+
 var radical_list = [
 {
 	"rad": ["zero"],

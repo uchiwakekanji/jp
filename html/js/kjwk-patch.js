@@ -10,7 +10,7 @@
 	if you not found the character kanji, usually the char kanji is CJK basic and compound strokes (see : kjwk-cjk-stokes.js)
 */
 
-// there was no definition for this radical
+// There was no definition for this radical
 kanji_defs['訁'] = {
 	"on_readings": [],
 	"kun_readings": ["gonben"],
@@ -19,7 +19,7 @@ kanji_defs['訁'] = {
 	],
 	"is_jouyou": false,
 };
-// radical definitions use the wrong Unicode point for lower heart
+// Radical definitions use the wrong Unicode point for lower heart
 radical_list[61] = {
 	"rad": ["心", "忄", "㣺"],
 	"def": "heart (りっしんべん risshinben, 立心偏)"

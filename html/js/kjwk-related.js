@@ -1,6 +1,8 @@
-// kankeiji = 関係 (Kankei) + kanji, the connection or relation among the kanji
-// this variable will be consume by function addKankeiji(). See : kjwk-logic.js
-// it will display in canvas as "関係 (relation)" 
+/*  Terms kankeiji = 関係 (Kankei) + kanji, the connection or relation among the kanji
+    this variable will be consume by function addKankeiji(). See : kjwk-logic.js
+    it will display in canvas as "関係 (relation)"
+*/
+
 var kankeiji = [
     {
 		"kanji": [ "点", "付" ],

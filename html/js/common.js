@@ -3,21 +3,21 @@
  Makes sense only if jQuery is loaded.
 */
 
-/* experimental */
+/* Experimental */
 function showFurigana(wantVisible) {
 	var display = wantVisible ? 'ruby-text' : 'none';
 	$('rt').css('display', display);
 }
 
-// handle furigana on/off change
+// Handle furigana on/off change
 $(function() {
-	// initialize toggle correctly at display
+	// Initialize toggle correctly at display
 	var onOff = Cookies.get('furigana') === 'off' ? 'off' : 'on';
     var wantVisible = (onOff === 'on');
     $('#furigana').bootstrapToggle(onOff);
     showFurigana(wantVisible);
 	
-	// handle furigana on/off change
+	// Handle furigana on/off change
 	$('#furigana').change(function() {
 		var wantVisible = $(this).prop('checked');
 		showFurigana(wantVisible);
@@ -115,8 +115,8 @@ $(function() {
 			}
 
 			// To prevent the for loop in the first place assign an empty array
-			// in case there are no cookies at all. Also prevents odd result when
-			// calling "get()"
+			// In case there are no cookies at all. Also prevents odd result when
+			// Calling "get()"
 			var cookies = document.cookie ? document.cookie.split('; ') : [];
 			var rdecode = /(%[0-9A-Z]{2})+/g;
 			var i = 0;
