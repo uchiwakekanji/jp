@@ -9,19 +9,19 @@
 哀: 衣 亠 口 #verified
 愛: 心 爪 冖 夂 #verified
 悪: 心 亜 #verified
-握: 扌 屋
-圧: 厂 土
-扱: 扌 及
-安: 宀 女
-暗: 音 日
-案: 安 木
+握: 扌 屋 #verified
+圧: 厂 土 #verified
+扱: 扌 及 #verified
+安: 宀 女 #verified
+暗: 音 日 #verified
+案: 安 木 #verified
 以: 𠄌 丶 人 #verified
-位: 亻 立
-依: 亻 衣
-偉: 亻 韋
-囲: 井 口
-委: 禾 女
-威: 女 戌
+位: 亻 立 #verified
+依: 亻 衣 #verified
+偉: 亻 韋 #verified
+囲: 井 口 #verified
+委: 禾 女 #verified
+威: 女 戌 #verified
 尉: 尸 示 寸 #is3
 意: 音 心
 慰: 尉 心

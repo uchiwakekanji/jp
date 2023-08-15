@@ -101,7 +101,7 @@ for o in range(len(xml_data['characters']['character'])):
 		on_readings = reading_meaning.get('on_readings', [])
 		kun_readings = reading_meaning.get('kun_readings', [])
 		meanings = reading_meaning.get('meaning', [])
-		radical = int(character_data.get('radical', {}).get('classical', ''))
+		radical = int(character_data.get('radical', {}).get('classical', 0))
 		
 		# Convert single values to a list
 		if not isinstance(on_readings, list):
