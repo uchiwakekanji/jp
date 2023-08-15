@@ -424,6 +424,7 @@ function update_details(kanji) {
 	// even if we have no definition, still build external links to jisho.org, jitenon.com and wiktionary.org
 	$('#jisho-link').attr("href", "https://jisho.org/search/" + kanji + "%20%23kanji");
 	$('#wiktionary-link').attr("href", "https://en.wiktionary.org/wiki/" + kanji);
+	$('#niaia-link').attr("href", "https://niai.mrahhal.net/similar?q=" + kanji);
 
 	// for jitenon, we split the encoded kanji manually, because when you used direct encodeURIComponent() it won't work
 	const encodedString = encodeURIComponent(kanji);
