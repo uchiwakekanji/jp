@@ -50,12 +50,12 @@ var edges = [];
 var globalId = 0; // unique ID for each node of graph
 
 // colors -- manually match to CSS for now
-var COLOR_MAIN = '#ACEDED';
-var COLOR_PARTOF = '#C5B7F1';
-var COLOR_RADICAL = '#B3F6B3';
-var COLOR_SHARED_ONYOMI = '#FFD9BA';
-var COLOR_NO_DICT = '#FFBABA';
-var COLOR_IJIDOUKUN = '#FFE270';
+var COLOR_MAIN = '#98D2EB'; //Main
+var COLOR_PARTOF = '#AA7BC3'; //Contains Main
+var COLOR_RADICAL = '#85FF9E'; //Radicals
+var COLOR_SHARED_ONYOMI = '#FFF07C'; //Shared Onyomi
+var COLOR_NO_DICT = '#FF5A5F';
+var COLOR_IJIDOUKUN = '#EE964B'; //
 var COLOR_ERROR = '#FFD9BA';
 
 // ensure each kanji node gets a new ID
@@ -425,7 +425,6 @@ function update_details(kanji) {
 	$('#jisho-link').attr("href", "https://jisho.org/search/" + kanji + "%20%23kanji");
 	$('#wiktionary-link').attr("href", "https://en.wiktionary.org/wiki/" + kanji);
 	$('#niaia-link').attr("href", "https://niai.mrahhal.net/similar?q=" + kanji);
-
 	// for jitenon, we split the encoded kanji manually, because when you used direct encodeURIComponent() it won't work
 	const encodedString = encodeURIComponent(kanji);
 	const splitArray = encodedString.split('%');

@@ -50,32 +50,32 @@ body, html {
 }
 
 .kanji-main {
-	background: #ACEDED;
+	background: #98D2EB;
 }
 
 .kanji-other {
-	background: #ACEDED;
+	background: #98D2EB;
 }
 
 .kanji-partof {
-	background: #C5B7F1;
+	background: #AA7BC3;
 }
 
 .kanji-radical {
-	background: #B3F6B3;
+	background: #85FF9E;
 }
 
 .kanji-shared-onyomi {
-	background: #FFD9BA;
+	background: #FFF07C;
 }
 
 .kanji-no-dict {
 	border: 1px dashed #444 !important;
-	background: #FFBABA;
+	background: #FF5A5F;
 }
 
 .kanji-ijidoukun {
-	background: #FFE270;
+	background: #EE964B;
 }
 
 th { text-align: right; }
@@ -115,9 +115,9 @@ td { vertical-align: top; }
         margin-bottom: 5%;
     }
 
-    .additional-button {
-        margin-top: 5%;
-        margin-bottom: 5%;
+    .additional-info {
+        margin-top: 2%;
+        margin-bottom: 2%;
     }
 
     .right-side-sub-scroll {
@@ -208,6 +208,7 @@ td { vertical-align: top; }
     .additional-info {
         margin-top: 1%;
         margin-bottom: 1%;
+        margin-left: -1%;
     }
 
     .right-side-sub-scroll {
@@ -255,7 +256,7 @@ td { vertical-align: top; }
     .additional-info {
         margin-top: 1%;
         margin-bottom: 1%;
-        margin-left: 41%;
+        margin-left: -1%;
     }
 
     .right-side-scroll {
