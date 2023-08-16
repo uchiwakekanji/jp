@@ -39,7 +39,7 @@
 				  <button class="btn btn-default" type="button" onclick="lookup();" aria-label="Search">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 				  </button>
-				  <button id="suggest-group" type="button" class="btn btn-primary" onclick="chooseRandom();">お任せ (Randomize)</button>
+				  <button id="suggest-group" type="button" class="btn btn-primary" onclick="chooseRandom();">Random</button>
 				</span>
 			  </div>
 			</div>
@@ -59,16 +59,16 @@
 						<h4 class="modal-title">About 漢字内訳 (Kanji Breakdown)</h4>
 					</div>
 					<div class="modal-body">
-						<p><b>Click</b> on any kanji to show dictionary information; <b>double-click</b> to make that kanji the main one.</p>
-						<p>I built this tool to explore all components of kanji &mdash; not just radicals &mdash; and find relations to other kanji. For example, 塾 and 熟 have different radicals, but have 11 strokes in common: a third kanji (孰) with the same onyomi (ジュク) as the others.</p>
-						<p>A component could convey sound or meaning; or it could be a result of changes and simplifications over time. This tool looks purely at visual connections and avoids making deeper and complex conclusions that could be wrong. It does point out:</p>
+						<p><b>Click</b> on any kanji to display dictionary information; <b>double-click</b> to set that kanji as the focal point.</p>
+						<p>I developed this tool to comprehensively explore all aspects of kanji, going beyond mere radicals, in order to uncover connections among different characters. For instance, 風 and 嵐 have distinct radicals, yet they share 9 strokes: a different kanji (覧) with the same kunyomi (らん) as the aforementioned ones.</p>
+						<p>A component could convey phonetic resonance or semantic significance, or it might be a result of historical transformations and simplifications. This tool strictly examines visual associations, sidestepping intricate deductions that could lead to inaccuracies. It does call attention to:</p>
 						<ul>
-						<li>Shared onyomi or shared kunyomi + meaning</li>
-						<li>Alternate forms of radical</li>
+						<li>Shared kunyomi or matching onyomi + meaning</li>
+						<li>Variant forms of radicals</li>
 						</ul>
 						<p>At least two similar sites are worth checking out, these site will gave you more complex result:</p>
 						<ul>
-						<li><a href="http://suiren.io/" target="_blank">Suiren</a> (hop between compounds) &mdash; currently not available</li>
+						<li><a href="http://suiren.io/" target="_blank">Suiren</a> (hop between compounds) &mdash; presently unavailable</li>
 						<li><a href="https://thekanjimap.com/index.html" target="_blank">The Kanji Map</a> (similar to this tool, and was there first)</li>
 						</ul>
 						<div style="margin-bottom: 5%;"><h2 >Legend</h2></div>
@@ -115,11 +115,11 @@
 			</div>
 		</div>
 
-		<div class="col-md-3 col-lg-3 col-xl-3 right-side-scroll">	
+		<div id="right-part-top" class="col-md-3 col-lg-3 col-xl-3 right-side-scroll">	
 			<div class="row">
-				<hr style="margin-left: 5%; margin-right: 5%;">
+				<hr style="margin-left: 5%; margin-right: 5%; display: block;">
 				<h4 id="kanji-info-label"><small>KANJI INFORMATION</small></h4>
-				<hr style="margin-left: 5%; margin-right: 5%;">
+				<hr style="margin-left: 5%; margin-right: 5%; display: block;">
 
 				<h1 id="kanji777"></h1>
 
