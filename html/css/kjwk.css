@@ -9,6 +9,37 @@ body, html {
     display: flex;
 }
 
+#snackbar {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+    color: #fff;
+    text-align: center;
+    border-radius: 25px; /* Rounded corners */
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: 17px;
+    transition: all 0.3s ease; /* Smooth transition for resizing */
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.3s 1.5s; /* Faster fadeout */
+  }
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+  
+@keyframes fadeout {
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 0; opacity: 0; }
+}
+
 /* Set gray background color and 100% height */
 .maincanvas {
 	background-color: #ffffff;
@@ -133,6 +164,10 @@ td { vertical-align: top; }
         display:block;
     }
 
+    #snackbar {
+        min-width: 80%; /* Adjust as needed */
+    }
+
 }
 
 /* sm */
@@ -176,6 +211,10 @@ td { vertical-align: top; }
         overflow:auto;
         height: 100%;
         display:block;
+    }
+
+    #snackbar {
+        min-width: 60%; /* Adjust as needed */
     }
 
 }
@@ -222,6 +261,10 @@ td { vertical-align: top; }
         overflow:auto;
         height: 100%;
         display:block;
+    }
+
+    #snackbar {
+        min-width: 40%; /* Adjust as needed */
     }
 
 }
@@ -277,6 +320,10 @@ td { vertical-align: top; }
         overflow:auto;
         height: 100%;
         display:block;
+    }
+
+    #snackbar {
+        min-width: 30%; /* Adjust as needed */
     }
 
 }

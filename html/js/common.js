@@ -3,6 +3,28 @@
  Makes sense only if jQuery is loaded.
 */
 
+var snackbarShown = false; // Flag to track if snackbar has been shown
+
+function toggleSnackbar() {
+  if (!snackbarShown) {
+    var snackbar = document.getElementById("snackbar");
+    var furiganaCheckbox = document.getElementById("furigana");
+
+    if (furiganaCheckbox.checked) {
+      snackbar.textContent = "Romaji On - Refresh Page";
+    } else {
+      snackbar.textContent = "Romaji Off - Refresh Page";
+    }
+
+    snackbar.classList.add("show");
+    setTimeout(function() {
+      snackbar.classList.remove("show");
+    }, 3000); // Hide after 3 seconds
+
+    snackbarShown = true; // Set the flag to true after showing once
+  }
+}
+
 /*!
  * JavaScript Cookie v2.1.3
  * https://github.com/js-cookie/js-cookie
