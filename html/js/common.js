@@ -3,26 +3,20 @@
  Makes sense only if jQuery is loaded.
 */
 
-var snackbarShown = false; // Flag to track if snackbar has been shown
-
 function toggleSnackbar() {
-  if (!snackbarShown) {
-    var snackbar = document.getElementById("snackbar");
-    var furiganaCheckbox = document.getElementById("furigana");
-
-    if (furiganaCheckbox.checked) {
-      snackbar.textContent = "Romaji On - Refresh Page";
-    } else {
-      snackbar.textContent = "Romaji Off - Refresh Page";
-    }
-
-    snackbar.classList.add("show");
-    setTimeout(function() {
-      snackbar.classList.remove("show");
-    }, 3000); // Hide after 3 seconds
-
-    snackbarShown = true; // Set the flag to true after showing once
-  }
+	var snackbar = document.getElementById("snackbar");
+	var furiganaCheckbox = document.getElementById("furigana");
+  
+	if (furiganaCheckbox.checked) {
+	  snackbar.textContent = "Romaji On";
+	} else {
+	  snackbar.textContent = "Romaji Off";
+	}
+  
+	snackbar.classList.add("show");
+	setTimeout(function() {
+	  snackbar.classList.remove("show");
+	}, 500); // Hide after
 }
 
 /*!
