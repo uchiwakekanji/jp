@@ -371,30 +371,54 @@ function is_jouyou(kanji) {
 // difficult because some relation info is discarded when we build the graph
 // highlight shared onyomi
 function update_details(kanji) {
+
+	var furiganaCheckbox = document.getElementById("furigana");
+
 	$('#kanji777').text(kanji);
 	var mainKanji = nodes[0].label;
 	if (kanji_defs[kanji]) {
 		// highlight shared onyomi, compared to parent (if not parent)
 		if (kanji == mainKanji) {
 			var onyomi = kanji_defs[kanji].on_readings.join(", ");
-			$('#onyomi').text(onyomi);
+
+			if (furiganaCheckbox.checked) {
+				$('#onyomi').text(onyomi + " --- " + wanakana.toRomaji(onyomi));
+			} else {
+				$('#onyomi').text(onyomi);
+			}
+
 		}
 		else {
 			var items = [];
 			inCommon = onReadingsInCommon(kanji, mainKanji);
 			for (var reading of kanji_defs[kanji].on_readings) {
 				if (inCommon.indexOf(reading) > -1) {
-					items.push("<span style='background: " + COLOR_SHARED_ONYOMI +
+
+					if (furiganaCheckbox.checked) {
+						items.push("<span style='background: " + COLOR_SHARED_ONYOMI +
+						"'>" + reading + " --- " + wanakana.toRomaji(reading) + "</span>");
+					} else {
+						items.push("<span style='background: " + COLOR_SHARED_ONYOMI +
 						"'>" + reading + "</span>");
+					}
+
 				}
 				else {
-					items.push(reading);
+					if (furiganaCheckbox.checked) {
+						items.push(reading + " --- " + wanakana.toRomaji(reading));
+					} else {
+						items.push(reading);
+					}
 				}
 			}
 			$('#onyomi').html(items.join(", "));
 		}
 		kunyomi = kanji_defs[kanji].kun_readings.join(", ");
-		$('#kunyomi').text(kunyomi);
+		if (furiganaCheckbox.checked) {
+			$('#kunyomi').text(kunyomi + " --- " + wanakana.toRomaji(kunyomi));
+		} else {
+			$('#kunyomi').text(kunyomi);
+		}
 		meanings = kanji_defs[kanji].meanings.join(", ");
 		$('#meanings').text(meanings);
 		// bright or dim jouyou indicator

@@ -4,6 +4,11 @@ body, html {
 	padding: 0;
 }
 
+.furigana-toggle-position {
+    justify-content: center;
+    display: flex;
+}
+
 /* Set gray background color and 100% height */
 .maincanvas {
 	background-color: #ffffff;
@@ -273,6 +278,7 @@ td { vertical-align: top; }
         height: 100%;
         display:block;
     }
+
 }
 
 .remove-margin {

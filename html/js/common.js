@@ -3,28 +3,6 @@
  Makes sense only if jQuery is loaded.
 */
 
-/* experimental */
-function showFurigana(wantVisible) {
-	var display = wantVisible ? 'ruby-text' : 'none';
-	$('rt').css('display', display);
-}
-
-// handle furigana on/off change
-$(function() {
-	// initialize toggle correctly at display
-	var onOff = Cookies.get('furigana') === 'off' ? 'off' : 'on';
-    var wantVisible = (onOff === 'on');
-    $('#furigana').bootstrapToggle(onOff);
-    showFurigana(wantVisible);
-	
-	// handle furigana on/off change
-	$('#furigana').change(function() {
-		var wantVisible = $(this).prop('checked');
-		showFurigana(wantVisible);
-		Cookies.set('furigana', (wantVisible ? 'on' : 'off'));
-	})
-})
-
 /*!
  * JavaScript Cookie v2.1.3
  * https://github.com/js-cookie/js-cookie
