@@ -23,7 +23,7 @@
 委: 禾 女 #verified
 威: 女 戌 #verified
 尉: 尸 示 寸 #is3
-意: 音 心
+意: 音 心 #verified
 慰: 尉 心
 易: 日 勿
 異: 田 井

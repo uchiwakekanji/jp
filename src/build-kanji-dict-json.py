@@ -6,6 +6,7 @@ from re import search
 import pdb
 
 #"""Builds the kanji dict2 js file"""
+
 # Input and output file paths
 input_file = 'C:/xampp/htdocs/jp/src/raw-dict2/kanjidic2.xml'
 output_file = 'C:/xampp/htdocs/jp/html/local-resources/cdn.rawgit.com/danang.priabada/kanji-dict2.js'

@@ -1,6 +1,7 @@
 import json
 import re
 import io
+import pdb
 
 #"""Builds the kanji composition json file"""
 
