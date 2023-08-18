@@ -96,32 +96,32 @@ function clearRelations() {
 // 'main' is the large kanji at the center of the graph
 // 'focused' is the kanji we are handling now (1st arg)
 function buildDescendantsGraph(kanji, parentId) {
-	var myId = getNewNodeId();
+	let myId = getNewNodeId();
 	// make main kanji slightly larger
-	var fontSize = parentId == 0 ? 60 : 40;
+	let fontSize = parentId == 0 ? 60 : 40;
 	// thicker border for jouyou
-	var borderThickness = is_jouyou(kanji) ? 4 : 1;
+	let borderThickness = is_jouyou(kanji) ? 4 : 1;
 
 	// radical ID == 0 means this kanji is not a radical
-	var radical_id = 0;
+	let radical_id = 0;
 
 	// use different color code for matching on readings
 	// (implies that might be the purpose of this related kanji)
-	var color = COLOR_MAIN;
+	let color = COLOR_MAIN;
 	// main kanji ID is 1
 	// if this is not the main one, check for:
 	// * shared onyomi with main
 	// * is radical of main (in any form)
 	if (myId > 1) {
-		var mainKanji = nodes[0].label;
+		let mainKanji = nodes[0].label;
 		if (onReadingsInCommon(kanji, mainKanji).length) {
 			color = COLOR_SHARED_ONYOMI;
 		}
 		// mark focused kanji if it matches any form of the main kanji's radical
 		if (mainKanji in kanji_defs) {
 			// in kanji_defs, the radical is an index, not a character
-			var kangxi_id = kanji_defs[mainKanji].radical;
-			var candidates = radical_list[kangxi_id].rad;
+			let kangxi_id = kanji_defs[mainKanji].radical;
+			let candidates = radical_list[kangxi_id].rad;
 			if (candidates.indexOf(kanji) >= 0) {
 				color = COLOR_RADICAL;
 				radical_id = kangxi_id;  // save for drawOtherFormsOfRadical()
@@ -129,7 +129,7 @@ function buildDescendantsGraph(kanji, parentId) {
 		}
 	}
 
-	var nodeProperties = {
+	let nodeProperties = {
 		'id': myId,
 		'font': { size: fontSize },
 		'color': color,
@@ -147,7 +147,7 @@ function buildDescendantsGraph(kanji, parentId) {
 	}
 
 	// record reason for adding this node
-	var reason = '---';
+	let reason = '---';
 	if (myId == 1) {
 		reason = '(主眼 - main kanji)';
 	}
@@ -175,15 +175,15 @@ function buildDescendantsGraph(kanji, parentId) {
 
 // add other forms of the radical (if any) to the graph, but do not expand them
 function drawOtherFormsOfRadical(kanji, myId, radical_id) {
-	var fontSize = 40;  // we are never the main kanji
-	var color = COLOR_RADICAL;
+	let fontSize = 40;  // we are never the main kanji
+	let color = COLOR_RADICAL;
 	if (radical_id > 0) {
-		var candidates = radical_list[radical_id].rad;
+		let candidates = radical_list[radical_id].rad;
 		for (var candidate of candidates) {
 			if (candidate != kanji) {
-				var isoform_id = getNewNodeId();
-				var borderThickness = is_jouyou(candidate) ? 4 : 1;
-				var np = {
+				let isoform_id = getNewNodeId();
+				let borderThickness = is_jouyou(candidate) ? 4 : 1;
+				let np = {
 					'id': isoform_id,
 					'font': { size: fontSize },
 					'color': color,
@@ -205,15 +205,15 @@ function drawOtherFormsOfRadical(kanji, myId, radical_id) {
 function addParentNodes(kanji) {
 	for (var parent of Object.keys(kanji_parts)) {
 		if (kanji_parts[parent].includes(kanji)) {
-			var parentId = getNewNodeId();
-			var borderThickness = is_jouyou(parent) ? 4 : 1;
-			var color = COLOR_PARTOF;
+			let parentId = getNewNodeId();
+			let borderThickness = is_jouyou(parent) ? 4 : 1;
+			let color = COLOR_PARTOF;
 			if (parentId > 1) {  // buggy; see 享
 				if (onReadingsInCommon(parent, nodes[0].label).length) {
 					color = COLOR_SHARED_ONYOMI;
 				}
 			}
-			var np = {
+			let np = {
 				'id': parentId,
 				'font': { size: 40 },
 				'color': color,
@@ -231,10 +231,10 @@ function addParentNodes(kanji) {
 // omit kanji already in graph
 // we know the ID is 1; call this only for main kanji
 function addIjidoukun(mainKanji) {
-	var sisters = new Set();
+	let sisters = new Set();
 	for (var group of ijidoukun) {
 		if (group.kanji.includes(mainKanji)) {
-			var exceptMain = group.kanji.filter(function(x) { return x !== mainKanji; });
+			let exceptMain = group.kanji.filter(function(x) { return x !== mainKanji; });
 			// skip kanji that are already on graph for other reasons
 			for (var sister of exceptMain) {
 				if (!isRelation(sister)) {
@@ -244,11 +244,11 @@ function addIjidoukun(mainKanji) {
 		}
 	}
 	// now we have all our sisters
-	for (let sister of sisters) {
-		var color = COLOR_IJIDOUKUN;
-		var borderThickness = is_jouyou(sister) ? 4 : 1;
-		var id = getNewNodeId();
-		var np = {
+	for (var sister of sisters) {
+		let color = COLOR_IJIDOUKUN;
+		let borderThickness = is_jouyou(sister) ? 4 : 1;
+		let id = getNewNodeId();
+		let np = {
 			'id': id,
 			'font': { size: 40 },
 			'color': color,
@@ -265,10 +265,10 @@ function addIjidoukun(mainKanji) {
 // find related kanji that I discovered manually
 // omit parents and children (i.e. kanji already in graph)
 function addKankeiji(mainKanji) {
-	var sisters = new Set();
+	let sisters = new Set();
 	for (var group of kankeiji) {
 		if (group.kanji.includes(mainKanji)) {
-			var exceptMain = group.kanji.filter(function(x) { return x !== mainKanji; });
+			let exceptMain = group.kanji.filter(function(x) { return x !== mainKanji; });
 			for (var sister of exceptMain) {
 				// skip kanji that are already on graph for other reasons
 				if (!isRelation(sister)) {
@@ -279,11 +279,11 @@ function addKankeiji(mainKanji) {
 		}
 	}
 	// now we have all our sisters
-	for (let sister of sisters) {
-		var color = COLOR_IJIDOUKUN;  // todo
-		var borderThickness = is_jouyou(sister) ? 4 : 1;
-		var id = getNewNodeId();
-		var np = {
+	for (var sister of sisters) {
+		let color = COLOR_IJIDOUKUN;  // todo
+		let borderThickness = is_jouyou(sister) ? 4 : 1;
+		let id = getNewNodeId();
+		let np = {
 			'id': id,
 			'font': { size: 40 },
 			'color': color,
@@ -300,7 +300,7 @@ function addKankeiji(mainKanji) {
 // find related kanji that I discovered manually
 // but there's a normal to unusual/alternate form relation
 function addAltForms(mainKanji) {
-	var sisters = new Set();
+	let sisters = new Set();
 	// main -> alt
 	if (mainKanji in altforms) {
 		for (var sister of Object.keys(altforms[mainKanji])) {
@@ -322,11 +322,11 @@ function addAltForms(mainKanji) {
 		}
 	}
 	// now we have all our sisters
-	for (let sister of sisters) {
-		var color = COLOR_IJIDOUKUN;  // todo
-		var borderThickness = is_jouyou(sister) ? 4 : 1;
-		var id = getNewNodeId();
-		var np = {
+	for (var sister of sisters) {
+		let color = COLOR_IJIDOUKUN;  // todo
+		let borderThickness = is_jouyou(sister) ? 4 : 1;
+		let id = getNewNodeId();
+		let np = {
 			'id': id,
 			'font': { size: 40 },
 			'color': color,
@@ -343,7 +343,7 @@ function addAltForms(mainKanji) {
 
 // for figuring out on readings in common
 function intersect(a, b) {
-	var t;
+	let t;
 	if (b.length > a.length) {
 		t = b, b = a, a = t;
 	} // indexOf to loop over shorter
@@ -356,8 +356,8 @@ function onReadingsInCommon(kanji1, kanji2) {
 	if (!(kanji1 in kanji_defs) || !(kanji2 in kanji_defs)) {
 		return [];
 	}
-	var on1 = kanji_defs[kanji1].on_readings;
-	var on2 = kanji_defs[kanji2].on_readings;
+	let on1 = kanji_defs[kanji1].on_readings;
+	let on2 = kanji_defs[kanji2].on_readings;
 	return intersect(on1, on2);
 }
 
@@ -372,14 +372,14 @@ function is_jouyou(kanji) {
 // highlight shared onyomi
 function update_details(kanji) {
 
-	var furiganaCheckbox = document.getElementById("furigana");
+	let furiganaCheckbox = document.getElementById("furigana");
 
 	$('#kanji777').text(kanji);
-	var mainKanji = nodes[0].label;
+	let mainKanji = nodes[0].label;
 	if (kanji_defs[kanji]) {
 		// highlight shared onyomi, compared to parent (if not parent)
 		if (kanji == mainKanji) {
-			var onyomi = kanji_defs[kanji].on_readings.join(", ");
+			let onyomi = kanji_defs[kanji].on_readings.join(", ");
 
 			if (furiganaCheckbox.checked) {
 				$('#onyomi').text(onyomi + " --- " + wanakana.toRomaji(onyomi));
@@ -389,7 +389,7 @@ function update_details(kanji) {
 
 		}
 		else {
-			var items = [];
+			let items = [];
 			inCommon = onReadingsInCommon(kanji, mainKanji);
 			for (var reading of kanji_defs[kanji].on_readings) {
 				if (inCommon.indexOf(reading) > -1) {
@@ -422,9 +422,9 @@ function update_details(kanji) {
 		meanings = kanji_defs[kanji].meanings.join(", ");
 		$('#meanings').text(meanings);
 		// bright or dim jouyou indicator
-		var jouyou_color = kanji_defs[kanji].is_jouyou ? '#444' : '#cccaca';
+		let jouyou_color = kanji_defs[kanji].is_jouyou ? '#444' : '#cccaca';
 		// daily used or not
-		var jouyou_text = kanji_defs[kanji].is_jouyou ? 'used in everyday life' : 'not regularly use';
+		let jouyou_text = kanji_defs[kanji].is_jouyou ? 'used in everyday life' : 'not regularly use';
 		$('#jouyou-yesno').css('color', jouyou_color);
 		$('#isjouyou').text(jouyou_text);
 		// relation to main
@@ -461,7 +461,7 @@ function update_mru(kanji) {
 	// first, remove any existing
 	$('#recent a').remove();
 	// update with recently focused
-	var unixTime = new Date().getTime();
+	let unixTime = new Date().getTime();
 	mostRecentlyUsed[kanji] = unixTime;
 	keysSorted = Object.keys(mostRecentlyUsed).sort(
 		function(a,b){
@@ -481,7 +481,7 @@ function update_mru(kanji) {
 
 // this function wil pop up, when app is no supported by browser
 function show_error() {
-	var error_nodes = [{
+	let error_nodes = [{
 		'id': 0,
 		'font': { size: 40 },
 		'color': COLOR_ERROR,
@@ -489,14 +489,14 @@ function show_error() {
 			"If you can, try one of:\nSafari (11+); Firefox or Chrome (current)",
 		'shape': 'box',
 	}];
-	var data = {
+	let data = {
 		nodes: new vis.DataSet(error_nodes),
 		edges: new vis.DataSet([])
 	};
-	var options = {
+	let options = {
 		nodes: { shadow:true }, edges: { shadow: true }
 	};
-	var network = new vis.Network(container, data, options);
+	let network = new vis.Network(container, data, options);
 }
 
 /* 
@@ -522,20 +522,20 @@ function reset_graph(kanji) {
 	addKankeiji(kanji);
 	addAltForms(kanji);
 
-	var data = {
+	let data = {
 		nodes: new vis.DataSet(nodes),
 		edges: new vis.DataSet(edges)
 	};
-	var options = {
+	let options = {
 		nodes: { shadow:true }, edges: { shadow: true }
 	};
-	var network = new vis.Network(container, data, options);
+	let network = new vis.Network(container, data, options);
 	// automatically draws
 	update_details(kanji);
 	update_mru(kanji);
 
 	network.on("click", function (params) {
-		var nodeId = params.nodes[0];
+		let nodeId = params.nodes[0];
 		// handle case of a click not on any node
 		if (! nodes[nodeId-1]) {
 			return;
@@ -547,8 +547,8 @@ function reset_graph(kanji) {
 	// network.on("dragEnd" is problematic: won't release mouse focus
 
 	network.on("doubleClick", function (params) {
-		var nodeId = params.nodes[0];
-		var kanji = nodes[nodeId-1].label;
+		let nodeId = params.nodes[0];
+		let kanji = nodes[nodeId-1].label;
 		reset_graph(kanji);
 	});
 
@@ -559,16 +559,16 @@ function reset_graph(kanji) {
 		poppedState = false;
 	}
 	else {
-		var state = {'k': kanji};
+		let state = {'k': kanji};
 		window.history.pushState(state, null, '/jp/?k=' + kanji); //base URL
 	}
 }
 
 // look for an interesting random kanji
 function chooseRandom() {
-	var keys = Object.keys(kanji_parts);
-	var isBoring = true;
-	var kanji = '静';
+	let keys = Object.keys(kanji_parts);
+	let isBoring = true;
+	let kanji = '静';
 	while (isBoring) {
 		kanji = keys[ keys.length * Math.random() << 0];
 		if (kanji_parts[kanji].length > 1) {
@@ -596,8 +596,8 @@ function lookup() {
 	// first, remove any existing
 	$('#looked_up a').remove();
 	//
-	var chars = $("#lookup_kanji").val().split('');
-	var alreadyReset = false;
+	let chars = $("#lookup_kanji").val().split('');
+	let alreadyReset = false;
 	for (key of chars) {
 		if (key in kanji_parts) {
 			addToSearchedList(key);
@@ -637,6 +637,7 @@ window.onpopstate = function(event) {
 		chooseRandom();
 	}
 };
+
 // handle /?k=X query param; if not present, choose a random kanji to start with
 const urlParams = new URLSearchParams(window.location.search);
 const kval = urlParams.get('k');
@@ -648,20 +649,7 @@ if (kval) {
 		paramFound = true;
 	}
 }
+
 if (!paramFound) {
 	chooseRandom();
-}
-
-// look for an interesting random kanji
-function displayJLPT() {
-	var keys = Object.keys(kanji_parts);
-	var isBoring = true;
-	var kanji = '静';
-	while (isBoring) {
-		kanji = keys[ keys.length * Math.random() << 0];
-		if (kanji_parts[kanji].length > 1) {
-			break;
-		}
-	}
-	reset_graph(kanji);
 }
