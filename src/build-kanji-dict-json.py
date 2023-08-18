@@ -87,9 +87,9 @@ for o in range(len(xml_data['characters']['character'])):
 	# If 'misc_dict' dictionary is None, set a default value
 	if misc_dict is None:
 		is_jouyou = False # set default as False
-		grade = 0 # 0 mean grade is no defined
+		grade = -1 # 0 mean grade is no defined
 	else:
-		grade = int(misc_dict.get('grade', 0))
+		grade = int(misc_dict.get('grade', -1))
 		is_jouyou = bool(misc_dict.get('is_jouyou', False))
 
 	# If 'reading_meaning' dictionary is None, set a default value
@@ -97,12 +97,12 @@ for o in range(len(xml_data['characters']['character'])):
 		on_readings = []
 		kun_readings = []
 		meanings = []
-		radical = 0
+		radical = -1
 	else:
 		on_readings = reading_meaning.get('on_readings', [])
 		kun_readings = reading_meaning.get('kun_readings', [])
 		meanings = reading_meaning.get('meaning', [])
-		radical = int(character_data.get('radical', {}).get('classical', 0))
+		radical = int(character_data.get('radical', {}).get('classical', -1))
 		
 		# Convert single values to a list
 		if not isinstance(on_readings, list):

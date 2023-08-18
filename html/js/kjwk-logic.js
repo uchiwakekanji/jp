@@ -167,7 +167,7 @@ function buildDescendantsGraph(kanji, parentId) {
 
 	// Here's the recursion
 	if (kanji_parts[kanji]) {
-		for (var subnode of kanji_parts[kanji]) {
+		for (let subnode of kanji_parts[kanji]) {
 			buildDescendantsGraph(subnode, myId);
 		}
 	}
@@ -179,7 +179,7 @@ function drawOtherFormsOfRadical(kanji, myId, radical_id) {
 	let color = COLOR_RADICAL;
 	if (radical_id > 0) {
 		let candidates = radical_list[radical_id].rad;
-		for (var candidate of candidates) {
+		for (let candidate of candidates) {
 			if (candidate != kanji) {
 				let isoform_id = getNewNodeId();
 				let borderThickness = is_jouyou(candidate) ? 4 : 1;
@@ -203,7 +203,7 @@ function drawOtherFormsOfRadical(kanji, myId, radical_id) {
 // Find all parents of this kanji, but 1 level only
 // We know ID is 1
 function addParentNodes(kanji) {
-	for (var parent of Object.keys(kanji_parts)) {
+	for (let parent of Object.keys(kanji_parts)) {
 		if (kanji_parts[parent].includes(kanji)) {
 			let parentId = getNewNodeId();
 			let borderThickness = is_jouyou(parent) ? 4 : 1;
@@ -232,11 +232,11 @@ function addParentNodes(kanji) {
 // We know the ID is 1; call this only for main kanji
 function addIjidoukun(mainKanji) {
 	let sisters = new Set();
-	for (var group of ijidoukun) {
+	for (let group of ijidoukun) {
 		if (group.kanji.includes(mainKanji)) {
 			let exceptMain = group.kanji.filter(function(x) { return x !== mainKanji; });
 			// skip kanji that are already on graph for other reasons
-			for (var sister of exceptMain) {
+			for (let sister of exceptMain) {
 				if (!isRelation(sister)) {
 					sisters.add(sister);
 				}
@@ -244,7 +244,7 @@ function addIjidoukun(mainKanji) {
 		}
 	}
 	// now we have all our sisters
-	for (var sister of sisters) {
+	for (let sister of sisters) {
 		let color = COLOR_IJIDOUKUN;
 		let borderThickness = is_jouyou(sister) ? 4 : 1;
 		let id = getNewNodeId();
@@ -266,10 +266,10 @@ function addIjidoukun(mainKanji) {
 // Omit parents and children (i.e. kanji already in graph)
 function addKankeiji(mainKanji) {
 	let sisters = new Set();
-	for (var group of kankeiji) {
+	for (let group of kankeiji) {
 		if (group.kanji.includes(mainKanji)) {
 			let exceptMain = group.kanji.filter(function(x) { return x !== mainKanji; });
-			for (var sister of exceptMain) {
+			for (let sister of exceptMain) {
 				// Skip kanji that are already on graph for other reasons
 				if (!isRelation(sister)) {
 					sisters.add(sister);
@@ -279,7 +279,7 @@ function addKankeiji(mainKanji) {
 		}
 	}
 	// now we have all our sisters
-	for (var sister of sisters) {
+	for (let sister of sisters) {
 		let color = COLOR_IJIDOUKUN;  // todo
 		let borderThickness = is_jouyou(sister) ? 4 : 1;
 		let id = getNewNodeId();
@@ -303,7 +303,7 @@ function addAltForms(mainKanji) {
 	let sisters = new Set();
 	// main -> alt
 	if (mainKanji in altforms) {
-		for (var sister of Object.keys(altforms[mainKanji])) {
+		for (let sister of Object.keys(altforms[mainKanji])) {
 			if (!isRelation(sister)) {
 				sisters.add(sister);
 				addRelation(sister, altforms[mainKanji][sister]['reason']);
@@ -311,8 +311,8 @@ function addAltForms(mainKanji) {
 		}
 	}
 	// alt -> main
-	for (var main of Object.keys(altforms)) {
-		for (var alt of Object.keys(altforms[main])) {
+	for (let main of Object.keys(altforms)) {
+		for (let alt of Object.keys(altforms[main])) {
 			if (alt == mainKanji) {
 				if (!isRelation(main)) {
 					sisters.add(main);
@@ -322,7 +322,7 @@ function addAltForms(mainKanji) {
 		}
 	}
 	// now we have all our sisters
-	for (var sister of sisters) {
+	for (let sister of sisters) {
 		let color = COLOR_IJIDOUKUN;  // todo
 		let borderThickness = is_jouyou(sister) ? 4 : 1;
 		let id = getNewNodeId();
@@ -391,7 +391,7 @@ function update_details(kanji) {
 		else {
 			let items = [];
 			inCommon = onReadingsInCommon(kanji, mainKanji);
-			for (var reading of kanji_defs[kanji].on_readings) {
+			for (let reading of kanji_defs[kanji].on_readings) {
 				if (inCommon.indexOf(reading) > -1) {
 
 					if (furiganaCheckbox.checked) {
@@ -436,7 +436,7 @@ function update_details(kanji) {
 		}
 	}
 	else {
-		var notFound = '---';
+		let notFound = '---';
 		$('#onyomi').text(notFound);
 		$('#kunyomi').text(notFound);
 		$('#isjouyou').text(notFound);
@@ -468,7 +468,7 @@ function update_mru(kanji) {
 			return mostRecentlyUsed[b] - mostRecentlyUsed[a];
 		}
 	);
-	for (var key of keysSorted) {
+	for (let key of keysSorted) {
 		$('<a>',{
 			text: key,
 			title: 'Look up ' + key,
