@@ -340,7 +340,6 @@ function addAltForms(mainKanji) {
 	}
 }
 
-
 // For figuring out on readings in common
 function intersect(a, b) {
 	let t;
@@ -609,8 +608,8 @@ function lookup() {
 	}
 	// If not already reset, we didn't find anything
 	if (!alreadyReset) {
-		$('#notFoundString').text($("#lookup_kanji").val());
-		$('#modalNotFound').modal('show');
+		$('#notfound-string').text($("#lookup_kanji").val());
+		$('#modal-notfound').modal('show');
 	}
 }
 
@@ -621,8 +620,8 @@ function lookupOne(kanji) {
 		reset_graph(kanji);
 	}
 	else {
-		$('#notFoundString').text($("#lookup_kanji").val());
-		$('#modalNotFound').modal('show');
+		$('#notfound-string').text($("#lookup_kanji").val());
+		$('#modal-notfound').modal('show');
 	}
 }
 

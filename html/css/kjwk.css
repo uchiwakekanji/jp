@@ -23,12 +23,12 @@ body, html {
     transform: translateX(-50%); /* Center horizontally */
     font-size: 17px;
     transition: all 0.3s ease; /* Smooth transition for resizing */
-  }
+}
   
-  #snackbar.show {
+#snackbar.show {
     visibility: visible;
     animation: fadein 0.5s, fadeout 0.3s 1.5s; /* Faster fadeout */
-  }
+}
 
 @keyframes fadein {
     from {bottom: 0; opacity: 0;}
@@ -53,6 +53,11 @@ body, html {
 #right-part {
     padding: 5%;
     margin-top: -5%;
+}
+
+#right-part-top {
+    padding-top: 0%;
+    padding-bottom: 0%;
 }
 
 #right-part table th {
