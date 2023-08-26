@@ -49,13 +49,13 @@ var nodes = [];
 var edges = [];
 var globalId = 0; // unique ID for each node of graph
 
-// colors -- manually match to CSS for now
+// Colors -- manually match to CSS for now
 var COLOR_MAIN = '#98D2EB'; //Main
 var COLOR_PARTOF = '#AA7BC3'; //Contains Main
 var COLOR_RADICAL = '#85FF9E'; //Radicals
 var COLOR_SHARED_ONYOMI = '#FFF07C'; //Shared Onyomi
 var COLOR_NO_DICT = '#FF5A5F';
-var COLOR_IJIDOUKUN = '#EE964B'; //
+var COLOR_IJIDOUKUN = '#EE964B';
 var COLOR_ERROR = '#FFD9BA';
 
 // Ensure each kanji node gets a new ID
@@ -77,7 +77,7 @@ var poppedState = false;
 	Remember each kanji's reason for being displayed.
 	Do this for each node you add to the graph.
 */
-var relations = {};  // Remember
+var relations = {}; // Remember
 function addRelation(kanji, reason) {
 	if (!relations[kanji]) {
 		relations[kanji] = { 'reason': reason };
@@ -124,7 +124,7 @@ function buildDescendantsGraph(kanji, parentId) {
 			let candidates = radical_list[kangxi_id].rad;
 			if (candidates.indexOf(kanji) >= 0) {
 				color = COLOR_RADICAL;
-				radical_id = kangxi_id;  // Save for drawOtherFormsOfRadical()
+				radical_id = kangxi_id; // Save for drawOtherFormsOfRadical()
 			}
 		}
 	}
@@ -175,7 +175,7 @@ function buildDescendantsGraph(kanji, parentId) {
 
 // Add other forms of the radical (if any) to the graph, but do not expand them
 function drawOtherFormsOfRadical(kanji, myId, radical_id) {
-	let fontSize = 40;  // we are never the main kanji
+	let fontSize = 40; // we are never the main kanji
 	let color = COLOR_RADICAL;
 	if (radical_id > 0) {
 		let candidates = radical_list[radical_id].rad;
@@ -208,7 +208,7 @@ function addParentNodes(kanji) {
 			let parentId = getNewNodeId();
 			let borderThickness = is_jouyou(parent) ? 4 : 1;
 			let color = COLOR_PARTOF;
-			if (parentId > 1) {  // buggy; see 享
+			if (parentId > 1) { // buggy; see 享
 				if (onReadingsInCommon(parent, nodes[0].label).length) {
 					color = COLOR_SHARED_ONYOMI;
 				}
@@ -280,7 +280,7 @@ function addKankeiji(mainKanji) {
 	}
 	// now we have all our sisters
 	for (let sister of sisters) {
-		let color = COLOR_IJIDOUKUN;  // todo
+		let color = COLOR_IJIDOUKUN; // todo
 		let borderThickness = is_jouyou(sister) ? 4 : 1;
 		let id = getNewNodeId();
 		let np = {
@@ -323,7 +323,7 @@ function addAltForms(mainKanji) {
 	}
 	// now we have all our sisters
 	for (let sister of sisters) {
-		let color = COLOR_IJIDOUKUN;  // todo
+		let color = COLOR_IJIDOUKUN; // todo
 		let borderThickness = is_jouyou(sister) ? 4 : 1;
 		let id = getNewNodeId();
 		let np = {
@@ -448,7 +448,7 @@ function update_details(kanji) {
 	$('#jisho-link').attr("href", "https://jisho.org/search/" + kanji + "%20%23kanji");
 	$('#wiktionary-link').attr("href", "https://en.wiktionary.org/wiki/" + kanji);
 	$('#niaia-link').attr("href", "https://niai.mrahhal.net/similar?q=" + kanji);
-	// for jitenon, we split the encoded kanji manually, because when you used direct encodeURIComponent() it won't work
+	// for jitenon, we split the encoded kanji manually, because when you used direct encodeURIComponent() it won't work in jitenon
 	const encodedString = encodeURIComponent(kanji);
 	const splitArray = encodedString.split('%');
 	const filteredArray = splitArray.filter(part => part !== '');
@@ -513,7 +513,7 @@ function reset_graph(kanji) {
 	}
 	nodes = [];
 	edges = [];
-	globalId = 0;   // was 1
+	globalId = 0; // was 1
 	clearRelations();
 	buildDescendantsGraph(kanji, 0);
 	addParentNodes(kanji);
@@ -567,7 +567,7 @@ function reset_graph(kanji) {
 function chooseRandom() {
 	let keys = Object.keys(kanji_parts);
 	let isBoring = true;
-	let kanji = '静';
+	let kanji = '静'; // initiate kanji
 	while (isBoring) {
 		kanji = keys[ keys.length * Math.random() << 0];
 		if (kanji_parts[kanji].length > 1) {
@@ -649,6 +649,7 @@ if (kval) {
 	}
 }
 
+// opted from random kanji
 if (!paramFound) {
 	chooseRandom();
 }

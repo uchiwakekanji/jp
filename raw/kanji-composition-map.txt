@@ -24,8 +24,8 @@
 威: 女 戌 #verified
 尉: 尸 示 寸 #is3
 意: 音 心 #verified
-慰: 尉 心
-易: 日 勿
+慰: 尉 心 #verified
+易: 日 勿 #verified
 異: 田 井
 移: 禾 多
 維: 糸 隹
