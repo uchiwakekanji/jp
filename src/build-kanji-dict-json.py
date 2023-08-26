@@ -13,7 +13,7 @@ output_file = 'C:/xampp/htdocs/jp/html/local-resources/cdn.rawgit.com/danang.pri
 
 # Description of the script's purpose
 # This script generates a JSON file containing main information about specific kanji, including readings and meanings.
-#This script will be generate the kanji-dict.js that basicly the main info of specific kanji (such as how to read in kunyomi and onyomi)
+# This script will be generate the kanji-dict.js that basicly the main info of specific kanji (such as how to read in kunyomi and onyomi)
 
 # Read the input XML file
 # "r" stand for read

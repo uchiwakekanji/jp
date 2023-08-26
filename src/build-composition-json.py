@@ -9,6 +9,10 @@ input_file = 'C:/xampp/htdocs/jp/raw/kanji-composition-map.txt'
 output_file = 'C:/xampp/htdocs/jp/html/js/kjwk-composition.js'
 composition = {}
 
+# Description of the script's purpose
+# This script generates a JSON file that containing structure of kanji, that will draw in canvas.
+# In short kjwk-composition.js is main file that will be refer by system to draw the relation between kanjis and radicals
+
 # "r" stand for read
 with io.open(input_file, "r", encoding="utf8") as fp:
     lines = fp.readlines()
