@@ -51,16 +51,16 @@ body, html {
 }
 
 #right-part {
-    padding: 5%;
-    margin-top: -5%;
-}
-
-#right-part-top {
     padding-top: 0%;
     padding-bottom: 0%;
 }
 
-#right-part table th {
+#right-part-bottom {
+    padding: 5%;
+    margin-top: -5%;
+}
+
+#right-part-bottom table th {
 	color: #607f3a;
 	font-size: 135%;
 	font-weight: 510;
@@ -68,11 +68,11 @@ body, html {
 	vertical-align: top;
 }
 
-#right-part table td {
+#right-part-bottom table td {
 	vertical-align: top;
 }
 
-#right-part table {
+#right-part-bottom table {
 	border-collapse: collapse;
 	border-spacing: 80px 4px;
 	table-layout: auto;
